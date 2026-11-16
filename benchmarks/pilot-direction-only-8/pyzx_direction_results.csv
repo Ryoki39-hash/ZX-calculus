@@ -1,0 +1,9 @@
+circuit,qubits,input_t,input_2q,input_depth,forward_t,forward_2q,forward_depth,forward_verified,reverse_t,reverse_2q,reverse_depth,reverse_verified,chosen,chosen_2q_gain,reduce_median_ms,forward_extract_median_ms,reverse_extract_median_ms,median_extra_ms,pyzx,python,repeats
+tof_ladder_3q,3,7,6,11,7,13,21,True,7,13,21,True,forward,0,1.6698,0.5199,0.5525,0.5525,0.10.8,3.12.14,31
+tof_ladder_4q,4,14,12,20,12,28,41,True,12,32,41,True,forward,0,4.2019,1.147,1.1101,1.1101,0.10.8,3.12.14,31
+tof_ladder_5q,5,21,18,29,17,37,60,True,17,43,58,True,forward,0,6.9091,1.8652,1.9005,1.9005,0.10.8,3.12.14,31
+tof_ladder_6q,6,28,24,38,22,58,91,True,22,63,83,True,forward,0,14.0104,2.9668,3.217,3.217,0.10.8,3.12.14,31
+clifford_t_5q_s0,5,6,9,10,4,7,12,True,4,10,15,True,forward,0,1.6384,0.4672,0.4989,0.4989,0.10.8,3.12.14,31
+clifford_t_5q_s1,5,6,12,14,4,8,12,True,4,8,12,True,forward,0,1.8334,0.3192,0.4028,0.4028,0.10.8,3.12.14,31
+clifford_t_5q_s2,5,2,18,14,2,11,14,True,2,11,17,True,forward,0,2.914,0.4224,0.4614,0.4614,0.10.8,3.12.14,31
+clifford_t_5q_s3,5,5,9,11,3,6,8,True,3,6,9,True,forward,0,1.603,0.3109,0.3295,0.3295,0.10.8,3.12.14,31
