@@ -1,0 +1,6 @@
+torch
+torchvision
+numpy
+Pillow>=10.1
+huggingface_hub
+safetensors

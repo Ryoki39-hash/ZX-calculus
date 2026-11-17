@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.cache/
+models/
+.venv/
+
+# Input images, generated descriptors/reports and local verification outputs.
+data/
+output/
+tmp/
