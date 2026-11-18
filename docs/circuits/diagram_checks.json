@@ -1,0 +1,51 @@
+{
+  "scope": "Numerical checks of documentation input diagrams only; no ZX optimization or benchmark",
+  "convention": "q0 is MSB; fixed wire order; exact phase comparison (no fitted global phase)",
+  "atol": 1e-12,
+  "rtol": 0,
+  "pyzx": "0.10.8",
+  "numpy": "2.3.5",
+  "matplotlib": "3.10.8",
+  "checks": [
+    {
+      "id": "qft_4q",
+      "status": "passed",
+      "reference": "positive_phase_DFT16_including_final_swaps",
+      "matrix_dimension": 16,
+      "max_abs_difference": 3.7830966782820685e-15,
+      "unitarity_max_abs_difference": 7.771561172376096e-16
+    },
+    {
+      "id": "toffoli_ladder_4q",
+      "status": "passed",
+      "reference": "boolean_map_a_b_cxorab_dxor_b_times_cxorab",
+      "matrix_dimension": 16,
+      "max_abs_difference": 0.0,
+      "unitarity_max_abs_difference": 0.0
+    },
+    {
+      "id": "phase_parity_4q",
+      "status": "passed",
+      "reference": "diagonal_phase_pi_over_4_times_2parity012_minus_parity123",
+      "matrix_dimension": 16,
+      "max_abs_difference": 1.6081226496766364e-16,
+      "unitarity_max_abs_difference": 0.0
+    },
+    {
+      "id": "pauli_repeated_4q",
+      "status": "passed",
+      "reference": "expanded_CNOT_Rz_and_H_decomposition",
+      "matrix_dimension": 16,
+      "max_abs_difference": 1.0129834521696388e-15,
+      "unitarity_max_abs_difference": 2.220446049250313e-16
+    },
+    {
+      "id": "random_clifford_t_4q",
+      "status": "passed",
+      "reference": "original_PyZX_generated_circuit_matrix",
+      "matrix_dimension": 16,
+      "max_abs_difference": 3.927683650008203e-16,
+      "unitarity_max_abs_difference": 3.552713678800501e-15
+    }
+  ]
+}

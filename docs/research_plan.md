@@ -82,6 +82,8 @@ Bの第一候補は `pyzx.optimize.basic_optimization` とし、SWAP関連の設
 
 ### 4.1 最初の入力セット
 
+**[5種類の回路図と読み方](circuit_diagrams.md)**に、各ファミリーの4量子ビットの入力図と英語のFigure captionを掲載する（2026-11-18追加）。位相回路・反復Pauli回転の図は説明用の例であり、以下の本実験の生成規則を確定するものではない。作図用の入力生成・演算確認は、3条件の最適化比較の実行記録と区別する。
+
 以下を**実行前に固定する初期案**とする。生成器、長さ、角度、シードなどをマニフェストへ書き、小規模な動作確認を終えてから33入力全体を実行する。
 
 | ファミリー | 条件 | 入力数 | 主な確認点 |
@@ -293,3 +295,4 @@ research_log/YYYY-MM-DD.md            # 日々の実施記録
 - **[S2] [IBM Quantum QFTGate](https://quantum.cloud.ibm.com/docs/en/api/qiskit/qiskit.circuit.library.QFTGate)** — n量子ビットQFTの定義。
 - **[S3] [PyZX gate definitions](https://github.com/zxcalc/pyzx/blob/master/pyzx/circuit/gates.py)** — 位相ゲートとtcountの実装。masterは変化するため、本実験ではインストール版またはcommitを固定して確認する。
 - [PyZX FAQ](https://pyzx.readthedocs.io/en/latest/faq.html) — 既知の回路依存性や最適化の適用範囲を確認する入口。
+

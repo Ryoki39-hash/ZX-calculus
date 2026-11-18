@@ -1,0 +1,5 @@
+# Direct dependencies used to generate and check the input-circuit figures.
+# Python 3.12 was used for the committed figures.
+matplotlib==3.10.8
+numpy==2.3.5
+pyzx==0.10.8

@@ -21,6 +21,8 @@ English working title: **Circuit-Dependent Effectiveness of ZX-Calculus-Based Qu
 
 初期案はQFT、Toffoli ladder、位相回路、反復Pauli回転回路、ランダムClifford＋Tの**5ファミリー・33入力**です。入力条件は実行前に固定します。
 
+**[5種類の回路図と読み方](docs/circuit_diagrams.md)**：4量子ビットの図、構造の説明、英語のFigure caption、再生成用コードを掲載しています。位相回路と反復Pauli回転は説明用の例です。図の生成・数値確認は最適化のベンチマーク結果ではありません。
+
 各入力について **Original／Gate-only／ZX** の3条件を比較し、主な基準はGate-onlyとします。ZXは `full_reduce` → 元の向きの標準抽出（`optimize_cnots=2`）→ 共通のゲート整理という固定手順です。T-count、2Q、depth、最適化時間、等価性を記録します。一般角を含むQFTは、Clifford＋T近似合成を行わない限りT-countをN/Aとし、主に2Q・depthを評価します。
 
 主比較表は **33入力×3条件＝99行**です。ZX抽出は33入力につき1設定の33候補条件で、時間反復は別に数えます。独立した99回路を用意するという意味ではありません。
@@ -34,8 +36,10 @@ English working title: **Circuit-Dependent Effectiveness of ZX-Calculus-Based Qu
 | 資料 | 内容 |
 | --- | --- |
 | [研究計画](docs/research_plan.md) | 改訂後の目的、二段階の手順、評価方法、卒論構成 |
+| [回路図ガイド](docs/circuit_diagrams.md) | 5ファミリーの入力図、読み方、生成条件、再生成手順 |
 | [既存8回路パイロット](benchmarks/pilot-direction-only-8/README.md) | 以前の方向比較実験と制約。履歴として保存し、新計画では両方向比較を実施しない |
 | [既存パイロットCSV](benchmarks/pilot-direction-only-8/pyzx_direction_results.csv) | 以前の実測値。新計画のGate-only比較ではない |
 | [研究日誌](research_log/) | 日付ごとのGoal、Experiment、Results、Discussion、Next Actions |
 
 過去のCSV・コード・日誌は履歴として保存します。新しい実行は別run_idで記録し、既存の計測値を上書きしません。今回変更するのは今後の研究計画であり、旧パイロットコードから処理を削除するものではありません。計画の保存は、実験の自動実行やZX Research Studioとの同期を意味しません。
+

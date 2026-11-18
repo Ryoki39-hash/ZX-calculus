@@ -1,0 +1,931 @@
+{
+  "schema_version": 1,
+  "purpose": "documentation_input_circuit_illustrations",
+  "research_plan_commit": "58bb57cafeb4c65aa649f64cfc9676673858e0f0",
+  "basis_order": "|q0 q1 q2 q3>; q0 is most significant",
+  "no_measurements": true,
+  "no_input_state_assumed": true,
+  "no_optimization_performed": true,
+  "examples": [
+    {
+      "id": "qft_4q",
+      "title": "01  Quantum Fourier transform",
+      "subtitle": "4 qubits / 16-point QFT / positive phase / final SWAPs included",
+      "status": "Mathematical input example; no optimization performed",
+      "gates": [
+        {
+          "kind": "H",
+          "qubits": [
+            0
+          ]
+        },
+        {
+          "kind": "CP",
+          "qubits": [
+            1,
+            0
+          ],
+          "angle_pi": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "CP",
+          "qubits": [
+            2,
+            0
+          ],
+          "angle_pi": [
+            1,
+            4
+          ]
+        },
+        {
+          "kind": "CP",
+          "qubits": [
+            3,
+            0
+          ],
+          "angle_pi": [
+            1,
+            8
+          ]
+        },
+        {
+          "kind": "H",
+          "qubits": [
+            1
+          ]
+        },
+        {
+          "kind": "CP",
+          "qubits": [
+            2,
+            1
+          ],
+          "angle_pi": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "CP",
+          "qubits": [
+            3,
+            1
+          ],
+          "angle_pi": [
+            1,
+            4
+          ]
+        },
+        {
+          "kind": "H",
+          "qubits": [
+            2
+          ]
+        },
+        {
+          "kind": "CP",
+          "qubits": [
+            3,
+            2
+          ],
+          "angle_pi": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "H",
+          "qubits": [
+            3
+          ]
+        },
+        {
+          "kind": "SWAP",
+          "qubits": [
+            0,
+            3
+          ]
+        },
+        {
+          "kind": "SWAP",
+          "qubits": [
+            1,
+            2
+          ]
+        }
+      ],
+      "groups": [],
+      "qubits": 4,
+      "gate_order": "chronological_left_to_right"
+    },
+    {
+      "id": "toffoli_ladder_4q",
+      "title": "02  Toffoli ladder",
+      "subtitle": "4 qubits / two overlapping CCX gates / high-level representation",
+      "status": "Same ladder construction as the historical pilot; not a new benchmark run",
+      "gates": [
+        {
+          "kind": "CCX",
+          "qubits": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "CCX",
+          "qubits": [
+            1,
+            2,
+            3
+          ]
+        }
+      ],
+      "groups": [],
+      "qubits": 4,
+      "gate_order": "chronological_left_to_right"
+    },
+    {
+      "id": "phase_parity_4q",
+      "title": "03  CNOT + phase circuit",
+      "subtitle": "Illustration: repeated parity A separated by a different parity B",
+      "status": "Teaching example; the experimental random phase generator is not fixed here",
+      "gates": [
+        {
+          "kind": "CX",
+          "qubits": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "CX",
+          "qubits": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "T",
+          "qubits": [
+            2
+          ]
+        },
+        {
+          "kind": "CX",
+          "qubits": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "CX",
+          "qubits": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "CX",
+          "qubits": [
+            1,
+            3
+          ]
+        },
+        {
+          "kind": "CX",
+          "qubits": [
+            2,
+            3
+          ]
+        },
+        {
+          "kind": "Tdg",
+          "qubits": [
+            3
+          ]
+        },
+        {
+          "kind": "CX",
+          "qubits": [
+            2,
+            3
+          ]
+        },
+        {
+          "kind": "CX",
+          "qubits": [
+            1,
+            3
+          ]
+        },
+        {
+          "kind": "CX",
+          "qubits": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "CX",
+          "qubits": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "T",
+          "qubits": [
+            2
+          ]
+        },
+        {
+          "kind": "CX",
+          "qubits": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "CX",
+          "qubits": [
+            0,
+            2
+          ]
+        }
+      ],
+      "groups": [
+        {
+          "start": 0,
+          "end": 5,
+          "label": "A: $x_0\\oplus x_1\\oplus x_2$",
+          "color": "#eee5ff"
+        },
+        {
+          "start": 5,
+          "end": 10,
+          "label": "B: $x_1\\oplus x_2\\oplus x_3$",
+          "color": "#e2f5ed"
+        },
+        {
+          "start": 10,
+          "end": 15,
+          "label": "A: $x_0\\oplus x_1\\oplus x_2$",
+          "color": "#eee5ff"
+        }
+      ],
+      "qubits": 4,
+      "gate_order": "chronological_left_to_right"
+    },
+    {
+      "id": "pauli_repeated_4q",
+      "title": "04  Repeated Pauli rotations",
+      "subtitle": "Illustration: a mixed ZZ / XX / ZZ block, repeated twice",
+      "status": "Teaching example; this does not freeze the experimental block definition",
+      "gates": [
+        {
+          "kind": "RP",
+          "qubits": [
+            0,
+            1
+          ],
+          "angle_pi": [
+            1,
+            4
+          ],
+          "pauli": "ZZ"
+        },
+        {
+          "kind": "RP",
+          "qubits": [
+            1,
+            2
+          ],
+          "angle_pi": [
+            1,
+            4
+          ],
+          "pauli": "XX"
+        },
+        {
+          "kind": "RP",
+          "qubits": [
+            2,
+            3
+          ],
+          "angle_pi": [
+            -1,
+            4
+          ],
+          "pauli": "ZZ"
+        },
+        {
+          "kind": "RP",
+          "qubits": [
+            0,
+            1
+          ],
+          "angle_pi": [
+            1,
+            4
+          ],
+          "pauli": "ZZ"
+        },
+        {
+          "kind": "RP",
+          "qubits": [
+            1,
+            2
+          ],
+          "angle_pi": [
+            1,
+            4
+          ],
+          "pauli": "XX"
+        },
+        {
+          "kind": "RP",
+          "qubits": [
+            2,
+            3
+          ],
+          "angle_pi": [
+            -1,
+            4
+          ],
+          "pauli": "ZZ"
+        }
+      ],
+      "groups": [
+        {
+          "start": 0,
+          "end": 3,
+          "label": "Block B / repetition 1",
+          "color": "#e2f5ed"
+        },
+        {
+          "start": 3,
+          "end": 6,
+          "label": "Block B / repetition 2",
+          "color": "#e5efff"
+        }
+      ],
+      "qubits": 4,
+      "gate_order": "chronological_left_to_right"
+    },
+    {
+      "id": "random_clifford_t_4q",
+      "title": "05  Random Clifford + T circuit",
+      "subtitle": "PyZX 0.10.8 / seed 0 / p(H) = p(T) = 0.2 / ALL 80 generated gates",
+      "status": "Generated input illustration; not an optimization or performance result",
+      "gates": [
+        {
+          "kind": "H",
+          "qubits": [
+            3
+          ]
+        },
+        {
+          "kind": "CX",
+          "qubits": [
+            3,
+            1
+          ]
+        },
+        {
+          "kind": "H",
+          "qubits": [
+            2
+          ]
+        },
+        {
+          "kind": "H",
+          "qubits": [
+            2
+          ]
+        },
+        {
+          "kind": "CX",
+          "qubits": [
+            1,
+            3
+          ]
+        },
+        {
+          "kind": "CX",
+          "qubits": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "T",
+          "qubits": [
+            2
+          ]
+        },
+        {
+          "kind": "H",
+          "qubits": [
+            1
+          ]
+        },
+        {
+          "kind": "CX",
+          "qubits": [
+            0,
+            3
+          ]
+        },
+        {
+          "kind": "CX",
+          "qubits": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "CX",
+          "qubits": [
+            1,
+            3
+          ]
+        },
+        {
+          "kind": "CX",
+          "qubits": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "H",
+          "qubits": [
+            0
+          ]
+        },
+        {
+          "kind": "CX",
+          "qubits": [
+            3,
+            2
+          ]
+        },
+        {
+          "kind": "H",
+          "qubits": [
+            0
+          ]
+        },
+        {
+          "kind": "T",
+          "qubits": [
+            2
+          ]
+        },
+        {
+          "kind": "CX",
+          "qubits": [
+            2,
+            3
+          ]
+        },
+        {
+          "kind": "H",
+          "qubits": [
+            1
+          ]
+        },
+        {
+          "kind": "H",
+          "qubits": [
+            1
+          ]
+        },
+        {
+          "kind": "CX",
+          "qubits": [
+            1,
+            3
+          ]
+        },
+        {
+          "kind": "CX",
+          "qubits": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "H",
+          "qubits": [
+            3
+          ]
+        },
+        {
+          "kind": "CX",
+          "qubits": [
+            2,
+            3
+          ]
+        },
+        {
+          "kind": "CX",
+          "qubits": [
+            2,
+            3
+          ]
+        },
+        {
+          "kind": "CX",
+          "qubits": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "CX",
+          "qubits": [
+            3,
+            1
+          ]
+        },
+        {
+          "kind": "CX",
+          "qubits": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "CX",
+          "qubits": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "T",
+          "qubits": [
+            2
+          ]
+        },
+        {
+          "kind": "CX",
+          "qubits": [
+            0,
+            3
+          ]
+        },
+        {
+          "kind": "T",
+          "qubits": [
+            1
+          ]
+        },
+        {
+          "kind": "H",
+          "qubits": [
+            0
+          ]
+        },
+        {
+          "kind": "H",
+          "qubits": [
+            3
+          ]
+        },
+        {
+          "kind": "H",
+          "qubits": [
+            2
+          ]
+        },
+        {
+          "kind": "CX",
+          "qubits": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "H",
+          "qubits": [
+            3
+          ]
+        },
+        {
+          "kind": "CX",
+          "qubits": [
+            3,
+            1
+          ]
+        },
+        {
+          "kind": "T",
+          "qubits": [
+            2
+          ]
+        },
+        {
+          "kind": "CX",
+          "qubits": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "CX",
+          "qubits": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "CX",
+          "qubits": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "T",
+          "qubits": [
+            2
+          ]
+        },
+        {
+          "kind": "T",
+          "qubits": [
+            2
+          ]
+        },
+        {
+          "kind": "CX",
+          "qubits": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "T",
+          "qubits": [
+            1
+          ]
+        },
+        {
+          "kind": "CX",
+          "qubits": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "CX",
+          "qubits": [
+            1,
+            3
+          ]
+        },
+        {
+          "kind": "H",
+          "qubits": [
+            0
+          ]
+        },
+        {
+          "kind": "CX",
+          "qubits": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "CX",
+          "qubits": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "H",
+          "qubits": [
+            1
+          ]
+        },
+        {
+          "kind": "T",
+          "qubits": [
+            3
+          ]
+        },
+        {
+          "kind": "CX",
+          "qubits": [
+            0,
+            3
+          ]
+        },
+        {
+          "kind": "CX",
+          "qubits": [
+            3,
+            2
+          ]
+        },
+        {
+          "kind": "CX",
+          "qubits": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "CX",
+          "qubits": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "CX",
+          "qubits": [
+            0,
+            3
+          ]
+        },
+        {
+          "kind": "CX",
+          "qubits": [
+            0,
+            3
+          ]
+        },
+        {
+          "kind": "H",
+          "qubits": [
+            1
+          ]
+        },
+        {
+          "kind": "CX",
+          "qubits": [
+            3,
+            2
+          ]
+        },
+        {
+          "kind": "CX",
+          "qubits": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "T",
+          "qubits": [
+            1
+          ]
+        },
+        {
+          "kind": "H",
+          "qubits": [
+            2
+          ]
+        },
+        {
+          "kind": "CX",
+          "qubits": [
+            0,
+            3
+          ]
+        },
+        {
+          "kind": "H",
+          "qubits": [
+            1
+          ]
+        },
+        {
+          "kind": "CX",
+          "qubits": [
+            3,
+            2
+          ]
+        },
+        {
+          "kind": "H",
+          "qubits": [
+            2
+          ]
+        },
+        {
+          "kind": "T",
+          "qubits": [
+            3
+          ]
+        },
+        {
+          "kind": "H",
+          "qubits": [
+            2
+          ]
+        },
+        {
+          "kind": "CX",
+          "qubits": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "T",
+          "qubits": [
+            2
+          ]
+        },
+        {
+          "kind": "T",
+          "qubits": [
+            2
+          ]
+        },
+        {
+          "kind": "CX",
+          "qubits": [
+            3,
+            1
+          ]
+        },
+        {
+          "kind": "T",
+          "qubits": [
+            2
+          ]
+        },
+        {
+          "kind": "CX",
+          "qubits": [
+            1,
+            3
+          ]
+        },
+        {
+          "kind": "CX",
+          "qubits": [
+            3,
+            2
+          ]
+        },
+        {
+          "kind": "CX",
+          "qubits": [
+            1,
+            3
+          ]
+        },
+        {
+          "kind": "CX",
+          "qubits": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "T",
+          "qubits": [
+            3
+          ]
+        },
+        {
+          "kind": "T",
+          "qubits": [
+            3
+          ]
+        }
+      ],
+      "groups": [],
+      "generator": {
+        "function": "CNOT_HAD_PHASE_circuit",
+        "package": "pyzx",
+        "version": "0.10.8",
+        "parameters": {
+          "qubits": 4,
+          "depth": 80,
+          "p_had": 0.2,
+          "p_t": 0.2,
+          "clifford": false,
+          "seed": 0
+        },
+        "depth_argument_means": "gate_count_not_dependency_depth",
+        "qasm_sha256": "b9dcb09012aebc44ab2e38e73b6a5d402d096bb6d18b7f5fd260506e268174e0"
+      },
+      "qubits": 4,
+      "gate_order": "chronological_left_to_right"
+    }
+  ]
+}
