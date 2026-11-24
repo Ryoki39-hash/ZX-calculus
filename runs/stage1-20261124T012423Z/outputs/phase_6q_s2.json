@@ -1,0 +1,27 @@
+{
+  "Original": {
+    "qasm": "OPENQASM 2.0;\ninclude \"qelib1.inc\";\nqreg q[6];\ncx q[0], q[5];\nz q[1];\ntdg q[1];\ncx q[2], q[5];\ncx q[4], q[0];\ncx q[1], q[3];\ncx q[5], q[4];\ncx q[4], q[3];\ncx q[0], q[5];\nt q[2];\ncx q[4], q[1];\ncx q[1], q[5];\nsdg q[2];\ntdg q[4];\ncx q[5], q[4];\nt q[3];\ncx q[2], q[4];\nsdg q[3];\ncx q[3], q[5];\ncx q[1], q[3];\ns q[3];\ncx q[2], q[3];\ncx q[3], q[2];\ncx q[4], q[3];\ncx q[1], q[2];\ncx q[1], q[4];\ntdg q[3];\ns q[5];\ncx q[4], q[5];\ncx q[2], q[1];\ncx q[2], q[4];\ncx q[2], q[0];\ncx q[1], q[0];\nz q[5];\nt q[5];\nz q[1];\ntdg q[1];\ncx q[0], q[4];\nsdg q[2];\ncx q[0], q[3];\ncx q[0], q[5];\nsdg q[1];\ncx q[0], q[5];\ncx q[0], q[5];\ncx q[0], q[2];\nz q[1];\ntdg q[1];\nz q[5];\nt q[5];\nsdg q[0];\nz q[0];\nt q[0];\nz q[4];\ntdg q[4];\ncx q[0], q[2];\ntdg q[0];\ncx q[4], q[0];\ncx q[3], q[4];\ncx q[3], q[1];\ntdg q[5];\ncx q[0], q[3];\ncx q[1], q[4];\ncx q[3], q[5];\ncx q[1], q[2];\nt q[4];\ncx q[5], q[4];\ncx q[5], q[0];\nsdg q[1];\nz q[3];\ntdg q[3];\nz q[5];\nt q[5];\ncx q[1], q[3];\ns q[0];\nz q[4];\ntdg q[4];\nt q[5];\nsdg q[0];\nsdg q[3];\nz q[5];\nt q[5];\nz q[0];\nt q[0];\nz q[1];\nt q[1];\nz q[4];\ntdg q[4];\ncx q[2], q[4];\ncx q[1], q[5];\ncx q[3], q[5];\ncx q[4], q[5];\ns q[3];\ncx q[0], q[3];\nz q[4];\nt q[4];\n",
+    "sha256": "805efc7fb2d50a1fce5f29d4925683df085d2af84e900e9ec920dfb4bff21fc5"
+  },
+  "Gate-only": {
+    "qasm": "OPENQASM 2.0;\ninclude \"qelib1.inc\";\nqreg q[6];\nz q[1];\ntdg q[1];\ntdg q[2];\ncx q[1], q[3];\ncx q[0], q[5];\ncx q[2], q[5];\ncx q[4], q[0];\ncx q[5], q[4];\ncx q[4], q[3];\ncx q[4], q[1];\ntdg q[4];\ncx q[2], q[4];\ncx q[0], q[5];\ntdg q[3];\ncx q[1], q[5];\ncx q[5], q[4];\ncx q[3], q[5];\ns q[5];\ncx q[1], q[3];\ns q[3];\ncx q[2], q[3];\ncx q[1], q[2];\ncx q[3], q[2];\ncx q[4], q[3];\ncx q[1], q[4];\ncx q[4], q[5];\nz q[5];\nt q[5];\ncx q[2], q[1];\ncx q[2], q[0];\nsdg q[2];\ntdg q[3];\ncx q[2], q[4];\ncx q[1], q[0];\ns q[0];\ncx q[0], q[3];\ncx q[3], q[1];\ncx q[0], q[4];\nz q[4];\ntdg q[4];\ncx q[0], q[5];\ntdg q[1];\ncx q[1], q[2];\ncx q[4], q[0];\ncx q[3], q[4];\ncx q[1], q[4];\nt q[4];\ncx q[0], q[3];\nz q[3];\ntdg q[3];\ncx q[3], q[5];\ncx q[5], q[4];\nz q[5];\ntdg q[5];\ncx q[1], q[3];\nsdg q[4];\ncx q[2], q[4];\nz q[4];\nt q[4];\ncx q[5], q[0];\ncx q[1], q[5];\ncx q[3], q[5];\ncx q[4], q[5];\nt q[0];\ncx q[0], q[3];\n",
+    "sha256": "d790898618d26510a3c926d4c91f13b0989e707bcb7c0022968a74cce3c8ac3b"
+  },
+  "ZX": {
+    "qasm": "OPENQASM 2.0;\ninclude \"qelib1.inc\";\nqreg q[6];\ncx q[2], q[0];\nt q[2];\ncx q[4], q[5];\nsdg q[0];\ncx q[5], q[4];\ncx q[3], q[5];\ncx q[4], q[5];\ncx q[5], q[3];\nsdg q[3];\ncx q[1], q[4];\ncx q[3], q[5];\ncx q[2], q[3];\nt q[3];\ncx q[4], q[1];\ncx q[3], q[5];\nsdg q[1];\ncx q[1], q[4];\ncx q[4], q[0];\nt q[4];\ntdg q[0];\ncz q[0], q[3];\ncx q[4], q[1];\ncx q[0], q[5];\ntdg q[1];\ncx q[1], q[5];\nsdg q[5];\ncx q[2], q[5];\ntdg q[5];\ncx q[3], q[1];\ncx q[5], q[3];\nsdg q[1];\ncx q[0], q[1];\ncx q[2], q[1];\nz q[1];\ntdg q[1];\ncx q[2], q[0];\ncx q[1], q[3];\nz q[3];\ntdg q[3];\ncx q[4], q[2];\ncx q[5], q[0];\ncx q[5], q[4];\ncx q[3], q[5];\ntdg q[0];\ncz q[0], q[2];\nz q[2];\ntdg q[2];\ncz q[2], q[3];\ncx q[3], q[1];\ncz q[0], q[3];\ncx q[2], q[4];\ncx q[4], q[1];\ncx q[4], q[3];\ntdg q[4];\ncx q[0], q[5];\ncx q[4], q[5];\ntdg q[1];\ncx q[1], q[3];\ncx q[4], q[2];\ncx q[4], q[0];\ntdg q[2];\ncx q[2], q[4];\ncx q[2], q[5];\ncx q[1], q[2];\n",
+    "sha256": "53ae2b3f58bcde2eef93c2f5365a5a0e04f25ecd61427f1693297767ffa7afb6"
+  },
+  "ZX-before-cleanup": {
+    "qasm": "OPENQASM 2.0;\ninclude \"qelib1.inc\";\nqreg q[6];\ncx q[4], q[5];\ncx q[5], q[4];\ncx q[4], q[5];\ncx q[3], q[5];\ncx q[5], q[3];\ncx q[3], q[5];\ncx q[1], q[4];\ncx q[4], q[1];\ncx q[1], q[4];\nh q[4];\nh q[3];\nh q[2];\nh q[1];\nh q[0];\nh q[2];\nh q[4];\ncz q[2], q[3];\ncz q[1], q[4];\nh q[1];\nh q[5];\nh q[3];\ncz q[1], q[5];\ncz q[1], q[4];\ncz q[1], q[3];\ncz q[0], q[4];\ncz q[0], q[2];\nz q[1];\ntdg q[1];\nh q[0];\nh q[1];\ncz q[3], q[5];\ncz q[2], q[5];\ncz q[0], q[5];\ncz q[0], q[4];\ncz q[0], q[3];\ncz q[0], q[1];\nz q[0];\nt q[0];\nh q[5];\nh q[0];\ncz q[2], q[5];\ncz q[2], q[4];\ncz q[2], q[3];\ncz q[1], q[2];\ncz q[0], q[2];\nz q[2];\ntdg q[2];\nh q[2];\ncz q[2], q[4];\ncz q[1], q[3];\nz q[3];\nt q[3];\nz q[4];\ntdg q[4];\nh q[3];\nh q[4];\nh q[1];\ncz q[4], q[5];\ncz q[3], q[5];\ncz q[1], q[3];\ncz q[0], q[5];\nz q[1];\ntdg q[1];\nz q[5];\nt q[5];\nh q[1];\nh q[5];\nh q[3];\nh q[0];\nh q[2];\ncz q[3], q[5];\ncz q[2], q[4];\ncz q[2], q[3];\ncz q[1], q[3];\ncz q[0], q[5];\ncz q[0], q[3];\ncz q[0], q[2];\nz q[2];\nt q[2];\nz q[3];\ntdg q[3];\ntdg q[0];\nh q[2];\nh q[3];\nh q[0];\nh q[4];\ncz q[4], q[5];\ncz q[3], q[4];\ncz q[2], q[4];\ncz q[1], q[4];\ncz q[0], q[4];\ntdg q[4];\nh q[4];\nh q[2];\ncz q[2], q[5];\ncz q[2], q[4];\ntdg q[2];\nh q[2];\nh q[1];\ncz q[1], q[3];\ncz q[1], q[2];\nh q[5];\nh q[4];\nh q[3];\nh q[2];\ntdg q[1];\nh q[0];\n",
+    "sha256": "963710f5adcf8d7c8b95c21b9003aa2df91eec1e71e8a241c43cad26b171c2d4",
+    "metrics": {
+      "t_count": 13,
+      "two_q_count": 49,
+      "cnot_count": 9,
+      "cz_count": 40,
+      "depth": 54,
+      "total_gates": 107,
+      "non_clifford_rotations": 13
+    }
+  }
+}

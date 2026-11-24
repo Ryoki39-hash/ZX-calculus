@@ -1,0 +1,57 @@
+{
+  "spec": {
+    "circuit_id": "tof_ladder_8q",
+    "family": "toffoli_ladder",
+    "qubits": 8,
+    "seed": null,
+    "repetitions": null,
+    "definition_version": "broad-screening-circuits-v1",
+    "generator_parameters": {
+      "generator": "overlapping_toffoli_ladder_v1",
+      "chronological_ccx": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          2,
+          3,
+          4
+        ],
+        [
+          3,
+          4,
+          5
+        ],
+        [
+          4,
+          5,
+          6
+        ],
+        [
+          5,
+          6,
+          7
+        ]
+      ],
+      "pyzx_raw_gate": "TOF",
+      "arithmetic_representativeness": "synthetic ladder only"
+    },
+    "t_count_applicable": true,
+    "convention": {
+      "wire_order": "q0 is the most significant bit; fixed input/output order",
+      "pyzx_phase_unit": "pi",
+      "input_status": "raw generated input; no optimizer applied"
+    },
+    "raw_qasm_sha256": "1214de1451731351f63eeda4371e51f2f38326e161fc220f0a336c94470591bd",
+    "normalized_qasm_sha256": "a4cf8248a12675f0aae928ad6823fe115ae9acfc0b34df62fbc72deef2a3b291"
+  },
+  "raw_qasm": "OPENQASM 2.0;\ninclude \"qelib1.inc\";\nqreg q[8];\nccx q[0], q[1], q[2];\nccx q[1], q[2], q[3];\nccx q[2], q[3], q[4];\nccx q[3], q[4], q[5];\nccx q[4], q[5], q[6];\nccx q[5], q[6], q[7];\n",
+  "normalized_qasm": "OPENQASM 2.0;\ninclude \"qelib1.inc\";\nqreg q[8];\nh q[2];\ncx q[1], q[2];\ntdg q[2];\ncx q[0], q[2];\nt q[2];\ncx q[1], q[2];\ntdg q[2];\ncx q[0], q[2];\nt q[1];\nt q[2];\ncx q[0], q[1];\nt q[0];\ntdg q[1];\ncx q[0], q[1];\nh q[2];\nh q[3];\ncx q[2], q[3];\ntdg q[3];\ncx q[1], q[3];\nt q[3];\ncx q[2], q[3];\ntdg q[3];\ncx q[1], q[3];\nt q[2];\nt q[3];\ncx q[1], q[2];\nt q[1];\ntdg q[2];\ncx q[1], q[2];\nh q[3];\nh q[4];\ncx q[3], q[4];\ntdg q[4];\ncx q[2], q[4];\nt q[4];\ncx q[3], q[4];\ntdg q[4];\ncx q[2], q[4];\nt q[3];\nt q[4];\ncx q[2], q[3];\nt q[2];\ntdg q[3];\ncx q[2], q[3];\nh q[4];\nh q[5];\ncx q[4], q[5];\ntdg q[5];\ncx q[3], q[5];\nt q[5];\ncx q[4], q[5];\ntdg q[5];\ncx q[3], q[5];\nt q[4];\nt q[5];\ncx q[3], q[4];\nt q[3];\ntdg q[4];\ncx q[3], q[4];\nh q[5];\nh q[6];\ncx q[5], q[6];\ntdg q[6];\ncx q[4], q[6];\nt q[6];\ncx q[5], q[6];\ntdg q[6];\ncx q[4], q[6];\nt q[5];\nt q[6];\ncx q[4], q[5];\nt q[4];\ntdg q[5];\ncx q[4], q[5];\nh q[6];\nh q[7];\ncx q[6], q[7];\ntdg q[7];\ncx q[5], q[7];\nt q[7];\ncx q[6], q[7];\ntdg q[7];\ncx q[5], q[7];\nt q[6];\nt q[7];\ncx q[5], q[6];\nt q[5];\ntdg q[6];\ncx q[5], q[6];\nh q[7];\n"
+}

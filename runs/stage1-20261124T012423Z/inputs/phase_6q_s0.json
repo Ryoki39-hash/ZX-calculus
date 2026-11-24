@@ -1,0 +1,39 @@
+{
+  "spec": {
+    "circuit_id": "phase_6q_s0",
+    "family": "phase",
+    "qubits": 6,
+    "seed": 0,
+    "repetitions": null,
+    "definition_version": "broad-screening-circuits-v1",
+    "generator_parameters": {
+      "generator": "random_cnot_zphase_v1",
+      "operations": 80,
+      "p_phase": 0.4,
+      "p_cnot": 0.6,
+      "phase_numerators": [
+        -3,
+        -2,
+        -1,
+        1,
+        2,
+        3
+      ],
+      "phase_denominator": 4,
+      "rng": "random.Random(seed)",
+      "draw_order": "per operation draw rng.random(); if <0.4 draw target=rng.randrange(n), then numerator=rng.choice([-3,-2,-1,1,2,3]); otherwise draw [control,target]=rng.sample(range(n),2)",
+      "cnot_connectivity": "uniform ordered distinct qubit pair; all-to-all",
+      "input_filtering": "none; accidental repetitions/cancellations retained"
+    },
+    "t_count_applicable": true,
+    "convention": {
+      "wire_order": "q0 is the most significant bit; fixed input/output order",
+      "pyzx_phase_unit": "pi",
+      "input_status": "raw generated input; no optimizer applied"
+    },
+    "raw_qasm_sha256": "1634b3914813498916a821fa4d697a5979a19ea51ff05d8d5fe05253ceed8096",
+    "normalized_qasm_sha256": "12d8ffda6dffc259d02d8a7013f87f319ab2306288401205b0e4b59202712187"
+  },
+  "raw_qasm": "OPENQASM 2.0;\ninclude \"qelib1.inc\";\nqreg q[6];\ncx q[3], q[0];\nrz(0.25*pi) q[4];\ncx q[2], q[3];\nrz(0.5*pi) q[1];\nrz(-0.75*pi) q[1];\ncx q[2], q[4];\ncx q[4], q[1];\nrz(-0.75*pi) q[5];\ncx q[5], q[2];\ncx q[0], q[2];\ncx q[4], q[1];\ncx q[3], q[5];\ncx q[2], q[0];\ncx q[4], q[0];\nrz(0.75*pi) q[3];\ncx q[5], q[0];\ncx q[2], q[1];\ncx q[5], q[0];\nrz(-0.5*pi) q[4];\nrz(0.5*pi) q[1];\ncx q[0], q[2];\ncx q[3], q[0];\nrz(0.75*pi) q[2];\nrz(0.5*pi) q[2];\nrz(0.5*pi) q[4];\ncx q[3], q[0];\ncx q[3], q[2];\ncx q[2], q[1];\nrz(-0.75*pi) q[1];\ncx q[5], q[2];\ncx q[0], q[1];\ncx q[0], q[5];\ncx q[4], q[3];\ncx q[4], q[2];\ncx q[1], q[5];\ncx q[4], q[3];\ncx q[3], q[5];\ncx q[5], q[2];\nrz(-0.75*pi) q[4];\ncx q[5], q[2];\ncx q[1], q[0];\ncx q[0], q[1];\nrz(-0.25*pi) q[1];\ncx q[0], q[5];\ncx q[5], q[1];\nrz(0.75*pi) q[4];\ncx q[4], q[5];\ncx q[0], q[5];\ncx q[4], q[5];\nrz(-0.25*pi) q[0];\ncx q[0], q[5];\ncx q[1], q[5];\ncx q[3], q[1];\ncx q[0], q[5];\ncx q[4], q[0];\ncx q[0], q[1];\nrz(-0.25*pi) q[2];\ncx q[0], q[4];\ncx q[4], q[0];\ncx q[3], q[1];\nrz(0.25*pi) q[5];\ncx q[4], q[1];\ncx q[1], q[0];\ncx q[1], q[5];\nrz(-0.75*pi) q[2];\ncx q[3], q[1];\nrz(0.25*pi) q[5];\ncx q[4], q[2];\ncx q[3], q[2];\nrz(-0.75*pi) q[5];\ncx q[0], q[2];\ncx q[4], q[2];\nrz(-0.25*pi) q[3];\ncx q[5], q[2];\ncx q[5], q[4];\nrz(0.25*pi) q[2];\ncx q[5], q[0];\nrz(0.75*pi) q[1];\nrz(-0.5*pi) q[1];\ncx q[3], q[4];\n",
+  "normalized_qasm": "OPENQASM 2.0;\ninclude \"qelib1.inc\";\nqreg q[6];\ncx q[3], q[0];\nt q[4];\ncx q[2], q[3];\ns q[1];\nz q[1];\nt q[1];\ncx q[2], q[4];\ncx q[4], q[1];\nz q[5];\nt q[5];\ncx q[5], q[2];\ncx q[0], q[2];\ncx q[4], q[1];\ncx q[3], q[5];\ncx q[2], q[0];\ncx q[4], q[0];\nz q[3];\ntdg q[3];\ncx q[5], q[0];\ncx q[2], q[1];\ncx q[5], q[0];\nsdg q[4];\ns q[1];\ncx q[0], q[2];\ncx q[3], q[0];\nz q[2];\ntdg q[2];\ns q[2];\ns q[4];\ncx q[3], q[0];\ncx q[3], q[2];\ncx q[2], q[1];\nz q[1];\nt q[1];\ncx q[5], q[2];\ncx q[0], q[1];\ncx q[0], q[5];\ncx q[4], q[3];\ncx q[4], q[2];\ncx q[1], q[5];\ncx q[4], q[3];\ncx q[3], q[5];\ncx q[5], q[2];\nz q[4];\nt q[4];\ncx q[5], q[2];\ncx q[1], q[0];\ncx q[0], q[1];\ntdg q[1];\ncx q[0], q[5];\ncx q[5], q[1];\nz q[4];\ntdg q[4];\ncx q[4], q[5];\ncx q[0], q[5];\ncx q[4], q[5];\ntdg q[0];\ncx q[0], q[5];\ncx q[1], q[5];\ncx q[3], q[1];\ncx q[0], q[5];\ncx q[4], q[0];\ncx q[0], q[1];\ntdg q[2];\ncx q[0], q[4];\ncx q[4], q[0];\ncx q[3], q[1];\nt q[5];\ncx q[4], q[1];\ncx q[1], q[0];\ncx q[1], q[5];\nz q[2];\nt q[2];\ncx q[3], q[1];\nt q[5];\ncx q[4], q[2];\ncx q[3], q[2];\nz q[5];\nt q[5];\ncx q[0], q[2];\ncx q[4], q[2];\ntdg q[3];\ncx q[5], q[2];\ncx q[5], q[4];\nt q[2];\ncx q[5], q[0];\nz q[1];\ntdg q[1];\nsdg q[1];\ncx q[3], q[4];\n"
+}

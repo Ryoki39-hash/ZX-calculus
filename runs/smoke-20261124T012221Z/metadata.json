@@ -1,0 +1,48 @@
+{
+  "run_id": "smoke-20261124T012221Z",
+  "mode": "smoke",
+  "started_utc": "2026-11-24T01:22:21.689394+00:00",
+  "started_jst": "2026-11-24T10:22:21.689394+09:00",
+  "timezone": "Asia/Tokyo",
+  "code_commit": "uncommitted-development",
+  "protocol_id": "stage1-standard-v1",
+  "protocol_sha256": "512950edb4cd2c36de21ec78de3fadc3bcfbbeb55dc93c39ad0584e718dcadcb",
+  "manifest_sha256": "6faa2a5864de6688809e0350ae39f35de074a1344f310920506b1e711d46a4d0",
+  "expected_inputs": 5,
+  "expected_rows": 15,
+  "pyzx": "0.10.8",
+  "numpy": "2.3.5",
+  "python": "3.12.14",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "cpu_count": 9,
+  "cpu_model": "AMD EPYC 9V74 80-Core Processor",
+  "thread_env": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  },
+  "source_hashes": {
+    "repository_files_sha256": {
+      "benchmarks/broad_screening/run.py": "8167c3b54387d0dded9ea007e7b70a4bfe8a1eb6eeaa20e9ad5f342e3e21cfd6",
+      "benchmarks/broad_screening/circuits.py": "d8077280232533142132212dc2ffff767c4ce3fbededa46ee4508fa84ee15f7c",
+      "benchmarks/broad_screening/semantics.py": "3e6760e9b4b78573bced3bb1a2ef84857bedc2df6400e29f6c379116991a93ee",
+      "configs/stage1-standard-v1.json": "512950edb4cd2c36de21ec78de3fadc3bcfbbeb55dc93c39ad0584e718dcadcb"
+    },
+    "pyzx_module_sha256": {
+      "extract.py": "9711552976df6b4a7e8f5de7ae2a1cd9feb324477cf1801e1ecfa8c3eca10a16",
+      "simplify.py": "5b14143e8b7c21d7ccaf14942794cb7c34678a5ee5b2f58b6d3a5286a6be3cfa",
+      "optimize.py": "1db84a5afaba156caff1744d47af9654f14f3f61b69badd86c87da9520e1b447",
+      "generate.py": "d8634e3154e3dc163145b09351a8772faaba13e0f9a44acbed66bf8893ee24c9",
+      "gates.py": "49e25d0c67de905cd384e291dea7726f3fc637b4f65220e2ce95aa6759da91e6"
+    }
+  },
+  "state": "completed",
+  "finished_utc": "2026-11-24T01:22:22.423960+00:00",
+  "finished_jst": "2026-11-24T10:22:22.423960+09:00",
+  "wall_seconds": 0.734566,
+  "rows_written": 15,
+  "status_counts": {
+    "passed": 15
+  },
+  "peak_rss_kib": 40044
+}

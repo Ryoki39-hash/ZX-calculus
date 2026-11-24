@@ -1,0 +1,44 @@
+{
+  "spec": {
+    "circuit_id": "qft_8q",
+    "family": "qft",
+    "qubits": 8,
+    "seed": null,
+    "repetitions": null,
+    "definition_version": "broad-screening-circuits-v1",
+    "generator_parameters": {
+      "generator": "positive_phase_qft_v1",
+      "chronological_rule": "for i=0..n-1: H(i), then CP(control=j,target=i,phase_pi=1/2**(j-i)) for j=i+1..n-1",
+      "final_swaps": [
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "fourier_sign": 1,
+      "t_count_reason": "general-angle exact QFT; no approximate Clifford+T synthesis"
+    },
+    "t_count_applicable": false,
+    "convention": {
+      "wire_order": "q0 is the most significant bit; fixed input/output order",
+      "pyzx_phase_unit": "pi",
+      "input_status": "raw generated input; no optimizer applied"
+    },
+    "raw_qasm_sha256": "44447963243c08293d3506cc21d4827dc45705f003e90f14028dd14e361be5de",
+    "normalized_qasm_sha256": "5f96c1429700da84f65a1ef6c0ae09c4c4176576ee04f104debdcb912fbb7e1b"
+  },
+  "raw_qasm": "OPENQASM 2.0;\ninclude \"qelib1.inc\";\nqreg q[8];\nh q[0];\ncp(0.5*pi) q[1], q[0];\ncp(0.25*pi) q[2], q[0];\ncp(0.125*pi) q[3], q[0];\ncp(0.0625*pi) q[4], q[0];\ncp(0.03125*pi) q[5], q[0];\ncp(0.015625*pi) q[6], q[0];\ncp(0.0078125*pi) q[7], q[0];\nh q[1];\ncp(0.5*pi) q[2], q[1];\ncp(0.25*pi) q[3], q[1];\ncp(0.125*pi) q[4], q[1];\ncp(0.0625*pi) q[5], q[1];\ncp(0.03125*pi) q[6], q[1];\ncp(0.015625*pi) q[7], q[1];\nh q[2];\ncp(0.5*pi) q[3], q[2];\ncp(0.25*pi) q[4], q[2];\ncp(0.125*pi) q[5], q[2];\ncp(0.0625*pi) q[6], q[2];\ncp(0.03125*pi) q[7], q[2];\nh q[3];\ncp(0.5*pi) q[4], q[3];\ncp(0.25*pi) q[5], q[3];\ncp(0.125*pi) q[6], q[3];\ncp(0.0625*pi) q[7], q[3];\nh q[4];\ncp(0.5*pi) q[5], q[4];\ncp(0.25*pi) q[6], q[4];\ncp(0.125*pi) q[7], q[4];\nh q[5];\ncp(0.5*pi) q[6], q[5];\ncp(0.25*pi) q[7], q[5];\nh q[6];\ncp(0.5*pi) q[7], q[6];\nh q[7];\nswap q[0], q[7];\nswap q[1], q[6];\nswap q[2], q[5];\nswap q[3], q[4];\n",
+  "normalized_qasm": "OPENQASM 2.0;\ninclude \"qelib1.inc\";\nqreg q[8];\nh q[0];\nt q[1];\ncx q[1], q[0];\ntdg q[0];\ncx q[1], q[0];\nt q[0];\nrz(0.125*pi) q[2];\ncx q[2], q[0];\nrz(1.875*pi) q[0];\ncx q[2], q[0];\nrz(0.125*pi) q[0];\nrz(0.0625*pi) q[3];\ncx q[3], q[0];\nrz(1.9375*pi) q[0];\ncx q[3], q[0];\nrz(0.0625*pi) q[0];\nrz(0.03125*pi) q[4];\ncx q[4], q[0];\nrz(1.96875*pi) q[0];\ncx q[4], q[0];\nrz(0.03125*pi) q[0];\nrz(0.015625*pi) q[5];\ncx q[5], q[0];\nrz(1.984375*pi) q[0];\ncx q[5], q[0];\nrz(0.015625*pi) q[0];\nrz(0.0078125*pi) q[6];\ncx q[6], q[0];\nrz(1.9921875*pi) q[0];\ncx q[6], q[0];\nrz(0.0078125*pi) q[0];\nrz(0.00390625*pi) q[7];\ncx q[7], q[0];\nrz(1.99609375*pi) q[0];\ncx q[7], q[0];\nrz(0.00390625*pi) q[0];\nh q[1];\nt q[2];\ncx q[2], q[1];\ntdg q[1];\ncx q[2], q[1];\nt q[1];\nrz(0.125*pi) q[3];\ncx q[3], q[1];\nrz(1.875*pi) q[1];\ncx q[3], q[1];\nrz(0.125*pi) q[1];\nrz(0.0625*pi) q[4];\ncx q[4], q[1];\nrz(1.9375*pi) q[1];\ncx q[4], q[1];\nrz(0.0625*pi) q[1];\nrz(0.03125*pi) q[5];\ncx q[5], q[1];\nrz(1.96875*pi) q[1];\ncx q[5], q[1];\nrz(0.03125*pi) q[1];\nrz(0.015625*pi) q[6];\ncx q[6], q[1];\nrz(1.984375*pi) q[1];\ncx q[6], q[1];\nrz(0.015625*pi) q[1];\nrz(0.0078125*pi) q[7];\ncx q[7], q[1];\nrz(1.9921875*pi) q[1];\ncx q[7], q[1];\nrz(0.0078125*pi) q[1];\nh q[2];\nt q[3];\ncx q[3], q[2];\ntdg q[2];\ncx q[3], q[2];\nt q[2];\nrz(0.125*pi) q[4];\ncx q[4], q[2];\nrz(1.875*pi) q[2];\ncx q[4], q[2];\nrz(0.125*pi) q[2];\nrz(0.0625*pi) q[5];\ncx q[5], q[2];\nrz(1.9375*pi) q[2];\ncx q[5], q[2];\nrz(0.0625*pi) q[2];\nrz(0.03125*pi) q[6];\ncx q[6], q[2];\nrz(1.96875*pi) q[2];\ncx q[6], q[2];\nrz(0.03125*pi) q[2];\nrz(0.015625*pi) q[7];\ncx q[7], q[2];\nrz(1.984375*pi) q[2];\ncx q[7], q[2];\nrz(0.015625*pi) q[2];\nh q[3];\nt q[4];\ncx q[4], q[3];\ntdg q[3];\ncx q[4], q[3];\nt q[3];\nrz(0.125*pi) q[5];\ncx q[5], q[3];\nrz(1.875*pi) q[3];\ncx q[5], q[3];\nrz(0.125*pi) q[3];\nrz(0.0625*pi) q[6];\ncx q[6], q[3];\nrz(1.9375*pi) q[3];\ncx q[6], q[3];\nrz(0.0625*pi) q[3];\nrz(0.03125*pi) q[7];\ncx q[7], q[3];\nrz(1.96875*pi) q[3];\ncx q[7], q[3];\nrz(0.03125*pi) q[3];\nh q[4];\nt q[5];\ncx q[5], q[4];\ntdg q[4];\ncx q[5], q[4];\nt q[4];\nrz(0.125*pi) q[6];\ncx q[6], q[4];\nrz(1.875*pi) q[4];\ncx q[6], q[4];\nrz(0.125*pi) q[4];\nrz(0.0625*pi) q[7];\ncx q[7], q[4];\nrz(1.9375*pi) q[4];\ncx q[7], q[4];\nrz(0.0625*pi) q[4];\nh q[5];\nt q[6];\ncx q[6], q[5];\ntdg q[5];\ncx q[6], q[5];\nt q[5];\nrz(0.125*pi) q[7];\ncx q[7], q[5];\nrz(1.875*pi) q[5];\ncx q[7], q[5];\nrz(0.125*pi) q[5];\nh q[6];\nt q[7];\ncx q[7], q[6];\ntdg q[6];\ncx q[7], q[6];\nt q[6];\nh q[7];\ncx q[0], q[7];\ncx q[7], q[0];\ncx q[0], q[7];\ncx q[1], q[6];\ncx q[6], q[1];\ncx q[1], q[6];\ncx q[2], q[5];\ncx q[5], q[2];\ncx q[2], q[5];\ncx q[3], q[4];\ncx q[4], q[3];\ncx q[3], q[4];\n"
+}

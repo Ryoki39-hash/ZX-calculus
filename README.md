@@ -4,6 +4,14 @@
 
 English working title: **Circuit-Dependent Effectiveness of ZX-Calculus-Based Quantum Circuit Optimization**
 
+## 最新の実測結果 — 2026-11-24
+
+**[33回路の結果と考察を読む](reports/stage1_2026-11-24.md)** · **[全99条件の表](analysis/stage1-20261124T012423Z/all_results.md)** · **[生CSV](runs/stage1-20261124T012423Z/results.csv)**
+
+5ファミリー・33入力のOriginal／Gate-only／ZX比較を実行した。全99条件で数値的等価性を確認し、Clifford＋Tの30入力中12入力で、Gate-onlyに対してTを増やさず2Qを削減した。一方、今回の8量子ビット11入力はすべて2Qが増加した。回路の種類だけで有効性を決めず、規模・密度・後処理の影響を追加検証する。
+
+実行IDは `stage1-20261124T012423Z`、固定コードは [`5101804`](https://github.com/Ryoki39-hash/ZX-calculus/commit/5101804b3db69b5b0e09f872849a8acb1d2313c9)。[再現手順](benchmarks/broad_screening/README.md)、[当日の研究日誌](research_log/2026-11-24.md)、[第2段階の追加検証計画](docs/stage2_followup_plan.md)を参照。第2段階は計画であり、まだ実行していない。
+
 ## 研究計画
 
 **[研究計画と段階別ロードマップを開く](docs/research_plan.md)**
@@ -27,7 +35,7 @@ English working title: **Circuit-Dependent Effectiveness of ZX-Calculus-Based Qu
 
 主比較表は **33入力×3条件＝99行**です。ZX抽出は33入力につき1設定の33候補条件で、時間反復は別に数えます。独立した99回路を用意するという意味ではありません。
 
-**直近の着手順：** 比較仕様と環境を固定し（S1-1）、入力一覧を作成し（S1-2）、各ファミリー1入力で3条件の検証と保存を確認してから（S1-3）、33入力を実行します（S1-4）。
+**直近の着手順：** 第1段階の実測・集計に続き、[第2段階の計画](docs/stage2_followup_plan.md)に従って未使用シードと新サイズで再現性を確認する。Backward／Reverse抽出は追加しない。
 
 ## 計画と実測記録の区別
 
@@ -41,5 +49,5 @@ English working title: **Circuit-Dependent Effectiveness of ZX-Calculus-Based Qu
 | [既存パイロットCSV](benchmarks/pilot-direction-only-8/pyzx_direction_results.csv) | 以前の実測値。新計画のGate-only比較ではない |
 | [研究日誌](research_log/) | 日付ごとのGoal、Experiment、Results、Discussion、Next Actions |
 
-過去のCSV・コード・日誌は履歴として保存します。新しい実行は別run_idで記録し、既存の計測値を上書きしません。今回変更するのは今後の研究計画であり、旧パイロットコードから処理を削除するものではありません。計画の保存は、実験の自動実行やZX Research Studioとの同期を意味しません。
+過去のCSV・コード・日誌は履歴として保存します。新しい実行は別run_idで記録し、既存の計測値を上書きしません。2026-11-24の実測は上の「最新の実測結果」に分離しています。日次／週次タスクとZX Research Studioの同期設定は変更していません。
 
