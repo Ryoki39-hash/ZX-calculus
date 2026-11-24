@@ -1,0 +1,11 @@
+seed,reuse_id,unique_id,both_verified,S2_reuse,S2_unique,reuse_advantage_2q_gates,reuse_original_t_count,reuse_original_two_q_count,reuse_original_depth,reuse_gate_t_count,reuse_zx_t_count,reuse_gate_two_q_count,reuse_zx_two_q_count,reuse_gate_depth,reuse_zx_depth,reuse_delta_t_count_zx_minus_gate,reuse_t_nonincrease_and_2q_reduction,reuse_input_active_wire_count,reuse_input_distinct_visited_parities,reuse_input_repeat_visits_to_existing_parities,unique_original_t_count,unique_original_two_q_count,unique_original_depth,unique_gate_t_count,unique_zx_t_count,unique_gate_two_q_count,unique_zx_two_q_count,unique_gate_depth,unique_zx_depth,unique_delta_t_count_zx_minus_gate,unique_t_nonincrease_and_2q_reduction,unique_input_active_wire_count,unique_input_distinct_visited_parities,unique_input_repeat_visits_to_existing_parities
+100,stage2_parity6_reuse_s100,stage2_parity6_unique_s100,True,13,-17,30,8,32,36,8,0,32,19,31,18,-8,True,6,4,4,8,32,35,8,8,24,41,31,35,0,False,6,8,0
+101,stage2_parity6_reuse_s101,stage2_parity6_unique_s101,True,12,-9,21,8,32,37,8,0,22,10,24,11,-8,True,6,4,4,8,32,36,8,8,26,35,32,27,0,False,6,8,0
+102,stage2_parity6_reuse_s102,stage2_parity6_unique_s102,True,8,-10,18,8,32,33,8,0,24,16,29,16,-8,True,6,4,4,8,32,37,8,8,24,34,29,29,0,False,6,8,0
+103,stage2_parity6_reuse_s103,stage2_parity6_unique_s103,True,10,-18,28,8,32,40,6,0,22,12,28,12,-6,True,6,4,4,8,32,33,8,8,24,42,27,43,0,False,6,8,0
+104,stage2_parity6_reuse_s104,stage2_parity6_unique_s104,True,17,-5,22,8,32,30,6,0,24,7,31,8,-6,True,6,4,4,8,32,34,8,8,28,33,34,26,0,False,6,8,0
+105,stage2_parity6_reuse_s105,stage2_parity6_unique_s105,True,25,-15,40,8,32,36,8,0,32,7,35,7,-8,True,5,4,4,8,32,38,8,8,26,41,33,32,0,False,6,8,0
+106,stage2_parity6_reuse_s106,stage2_parity6_unique_s106,True,15,-16,31,8,32,37,8,0,32,17,35,17,-8,True,6,4,4,8,32,36,8,8,26,42,31,34,0,False,6,8,0
+107,stage2_parity6_reuse_s107,stage2_parity6_unique_s107,True,26,-18,44,8,32,35,8,0,32,6,37,5,-8,True,6,4,4,8,32,38,8,8,26,44,33,30,0,False,6,8,0
+108,stage2_parity6_reuse_s108,stage2_parity6_unique_s108,True,18,-7,25,8,32,38,6,0,28,10,34,10,-6,True,6,4,4,8,32,39,8,8,30,37,36,28,0,False,6,8,0
+109,stage2_parity6_reuse_s109,stage2_parity6_unique_s109,True,3,-20,23,8,32,36,6,0,18,15,25,17,-6,True,6,4,4,8,32,36,8,8,26,46,33,37,0,False,6,8,0

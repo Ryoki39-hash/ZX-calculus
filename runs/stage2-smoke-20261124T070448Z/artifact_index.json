@@ -1,0 +1,168 @@
+{
+  "access": "Members are relative to runs/RUN_ID. Analysis and diagnostics read the ZIP directly; unpack beside metadata.json for manual inspection.",
+  "archive": "artifacts.zip",
+  "archive_bytes": 59352,
+  "archive_sha256": "eef09b98e271cd1e89dca6408af307892cfb3fbec1eb7f587db18e2317e91fb0",
+  "code_commit": "b309dd8f7ec1a8799b0a9a79b1ffee089d71cc97",
+  "direct_files": {
+    "metadata.json": {
+      "bytes": 2255,
+      "sha256": "9c07b2e0418da76523721ebad6cc5c974770662a971c5ff22980054999553e7d"
+    },
+    "protocol.json": {
+      "bytes": 2636,
+      "sha256": "3a375fbb22b65faaad3b9d9fdccbeb708225021a3aa7daf588329a97a7c8ceb9"
+    },
+    "results.csv": {
+      "bytes": 32706,
+      "sha256": "d5468ce3c6c2c610a709a50b0a8720eb509105cc3aff1371891825f545c1d4fb"
+    },
+    "verifier_controls.json": {
+      "bytes": 13282,
+      "sha256": "69ac7f66ab2e0f0614bee5b9fdc8f267e69c4d74c18b3f77f425774a92b97d6b"
+    }
+  },
+  "format": "zx-run-artifact-index-v1",
+  "member_count": 34,
+  "members": {
+    "graphs/stage2_parity6_reuse_s100.json": {
+      "bytes": 5036,
+      "sha256": "69226242c8810a73b38970a761cdc2b8fa869a812bd8ae5c3a00a6f27bdd25e5"
+    },
+    "graphs/stage2_parity6_unique_s100.json": {
+      "bytes": 5710,
+      "sha256": "138c40e3030606894a8f59d4ed3bf7369b9b966de63f83a503da6a046c179649"
+    },
+    "graphs/stage2_phase_4q_L80_s100.json": {
+      "bytes": 8130,
+      "sha256": "df94655a055512822748c04c01a61ce6aff62831ef1356f461a0e23a8721dc96"
+    },
+    "graphs/stage2_phase_8q_L160_s100.json": {
+      "bytes": 19044,
+      "sha256": "b2b5ca6f88f8713e31afd3bd2c741a02f117f53d5c2f62df1eaa8631c11feacf"
+    },
+    "graphs/stage2_qft_5q.json": {
+      "bytes": 6947,
+      "sha256": "5075252e97fcda7c13391935c03d8ca20585e9387bda7090011b36d2720f9d58"
+    },
+    "graphs/stage2_tof6_cascade2.json": {
+      "bytes": 4486,
+      "sha256": "0e5e0ca89aaea05d884addbe9d8c0316f9e9c21db52bcbfda9ee3ca36eba8e39"
+    },
+    "graphs/stage2_tof6_disjoint2.json": {
+      "bytes": 4583,
+      "sha256": "113988421f134c24834cfde0ae97adc28c3224a835c9f9d60671fb8e79773319"
+    },
+    "graphs/stage2_tof_ladder_5q.json": {
+      "bytes": 5960,
+      "sha256": "15a30e356329f7d183dbc4bd8d54d66ef09676f311d0647be47357dd1b77957c"
+    },
+    "inputs/stage2_parity6_reuse_s100.json": {
+      "bytes": 5638,
+      "sha256": "956f89b7b89815b204da25f983a76fea7dde6767df24c8b4557f82f3dbc2dd55"
+    },
+    "inputs/stage2_parity6_unique_s100.json": {
+      "bytes": 6292,
+      "sha256": "6ea7e2d178fc54aad6b76280400a582c0777aab93747c54bb681027a35b75e98"
+    },
+    "inputs/stage2_phase_4q_L80_s100.json": {
+      "bytes": 7762,
+      "sha256": "6a4192a36b0518dbf6c71e0d35f34e5565c85c00d70607befcd5187949df9e4b"
+    },
+    "inputs/stage2_phase_8q_L160_s100.json": {
+      "bytes": 14572,
+      "sha256": "7e70349ab38db3301fe0692db0a5557e9ec6613b56cc9c1874d70f7ff903af06"
+    },
+    "inputs/stage2_qft_5q.json": {
+      "bytes": 3732,
+      "sha256": "4b6887e6f4aa377b43cb3ccea067c609346803cd93d7cc6aa054bf0f9464d936"
+    },
+    "inputs/stage2_tof6_cascade2.json": {
+      "bytes": 2896,
+      "sha256": "7dc53046b5a064a57b905cb3ca9d2f1620306f1cc94a73e85f2fd918bfc74977"
+    },
+    "inputs/stage2_tof6_disjoint2.json": {
+      "bytes": 2868,
+      "sha256": "15eef100b02006488594f0a41f6852f7fb948d947aefe0ed207282b692a46095"
+    },
+    "inputs/stage2_tof_ladder_5q.json": {
+      "bytes": 2978,
+      "sha256": "133cf6f1fc079e65d6e93cad7ab4436e6de8dc346d0942acd08cb552dd7f1d55"
+    },
+    "outputs/stage2_parity6_reuse_s100.json": {
+      "bytes": 2803,
+      "sha256": "adc99d376fa50e10042c90a5f5922e96e7a3b8bca988301ea9c83ac7ae4baa0f"
+    },
+    "outputs/stage2_parity6_unique_s100.json": {
+      "bytes": 3484,
+      "sha256": "0f73efefdae07252c3c0200ab19c1cb30dd325752582bfcd66165a6cb0d680ea"
+    },
+    "outputs/stage2_phase_4q_L80_s100.json": {
+      "bytes": 3614,
+      "sha256": "1e7f426947e6616a03ad3279d35fc6167540da7e1c0ef63aa68fc024f7cfee84"
+    },
+    "outputs/stage2_phase_8q_L160_s100.json": {
+      "bytes": 9468,
+      "sha256": "a80684bc3bfd01ab4ddd0127dc199a40a812855439bf20c8c9d4b1f4382f7870"
+    },
+    "outputs/stage2_qft_5q.json": {
+      "bytes": 5053,
+      "sha256": "9f4374498d74237256466779d1b21d110d2283fd45d02816a10b41f223015727"
+    },
+    "outputs/stage2_tof6_cascade2.json": {
+      "bytes": 2864,
+      "sha256": "2ba196ec4f85555f2b27217be26d7248fd5921917b40dc2d22d8c7c1f79f8905"
+    },
+    "outputs/stage2_tof6_disjoint2.json": {
+      "bytes": 3028,
+      "sha256": "12be83c92895afb855e7c46cd32e864a8a6d3709d6ba6f1d447b89d5fc1503b8"
+    },
+    "outputs/stage2_tof_ladder_5q.json": {
+      "bytes": 3800,
+      "sha256": "a4afaee37cb944b8991e43d154b69010c8f99c5caf2ccebda124d84e2e1c1083"
+    },
+    "records/stage2_parity6_reuse_s100.json": {
+      "bytes": 7382,
+      "sha256": "d596bda51a50e87bca1909d370b40224ab2dd271fa292e1a43d2fe3bb20a55ab"
+    },
+    "records/stage2_parity6_unique_s100.json": {
+      "bytes": 7371,
+      "sha256": "6be20d458beca53b78525d14d889457029bed88d8e70ef3ad67f691701523eb0"
+    },
+    "records/stage2_phase_4q_L80_s100.json": {
+      "bytes": 6313,
+      "sha256": "24ba1d91e7968cb3d0d60e1e98635bd934ec67cffc7cdb403bfc2c9b6c62a0cd"
+    },
+    "records/stage2_phase_8q_L160_s100.json": {
+      "bytes": 6336,
+      "sha256": "0ba674cf1b77b7a248522dd0aec4fc3574bad3e96211425ce0bd7f33a5f3883a"
+    },
+    "records/stage2_qft_5q.json": {
+      "bytes": 5121,
+      "sha256": "a971d4f16bc0e79dfdfe6def5889063fed1f3dc367597694d66a38f60df6f895"
+    },
+    "records/stage2_tof6_cascade2.json": {
+      "bytes": 5240,
+      "sha256": "fc2091170ed26298bf3eb01cd0580207a797ec2d854d97cd2b0e1e23e24a734e"
+    },
+    "records/stage2_tof6_disjoint2.json": {
+      "bytes": 5150,
+      "sha256": "32c272163b3ad42e4f618f179056c729f95da1efb7eddc74a3352d45c55adbd3"
+    },
+    "records/stage2_tof_ladder_5q.json": {
+      "bytes": 5058,
+      "sha256": "474419aad023fbdd532ce198a95142ca97c15d1530eda9da13824d522791b23f"
+    },
+    "timings.json": {
+      "bytes": 67422,
+      "sha256": "7f5d22aa8d3a2e828879b1ab433bc8937b15314d746d71e6a8fb8dc44647f2d3"
+    },
+    "verification.json": {
+      "bytes": 20893,
+      "sha256": "2ceb28e8ba6242c95e7fc86d4fb8d0056d5f21ce11422a3ee25bbd798bd37b9e"
+    }
+  },
+  "preservation": "All ZIP members are byte-identical copies; no measured artifacts were changed.",
+  "run_id": "stage2-smoke-20261124T070448Z",
+  "uncompressed_bytes": 277034
+}

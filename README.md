@@ -4,13 +4,23 @@
 
 English working title: **Circuit-Dependent Effectiveness of ZX-Calculus-Based Quantum Circuit Optimization**
 
-## 最新の実測結果 — 2026-11-24
+## 最新の実測結果 — Stage 2（2026-11-24）
+
+**[第2段階：66入力の追試レポート](reports/stage2_2026-11-24.md)** · **[全198条件の表](analysis/stage2-20261124T070501Z/all_results.md)** · **[生CSV](runs/stage2-20261124T070501Z/results.csv)** · **[H1〜H6の判定](analysis/stage2-20261124T070501Z/hypotheses.md)**
+
+事前に固定したA・B・Cを実施し、全66入力・198条件で数値的等価性を確認した。Tを増やさず2Qを減らしたのはClifford＋Tの**31/64入力**。4q位相回路は80操作・160操作とも各10/10で改善し、6qパリティ再利用ありも10/10で改善した。一方、8q位相回路は80操作で0/10、160操作でも1/10の2Q削減にとどまった。再利用なしパリティ、QFT、Toffoliでは2Q増加が残る。H1〜H5は事前基準を満たし、**H6「Toffoliの連鎖側がより悪化」は不支持**だった。
+
+4例の抽出追跡はすべて保存済み出力と完全一致した。グラフが小さくなっても2Qが増える例があり、抽出時のCZとワイヤ置換の補正も負担になっている。ZXの最適化処理時間は全66入力でGate-onlyより長かった（入力ごとの時間比の中央値8.68倍）。結果は固定PyZX手順と今回の合成入力に限定する。
+
+実行ID：`stage2-20261124T070501Z`、実行日時：**2026-11-24 16:05:01–16:05:20 JST**、コードcommit：[`b309dd8`](https://github.com/Ryoki39-hash/ZX-calculus/commit/b309dd8f7ec1a8799b0a9a79b1ffee089d71cc97)。[再現・原データの取り出し方](benchmarks/controlled_followup/README.md)、[固定4例の抽出追跡](analysis/stage2-20261124T070501Z/diagnostics/summary.md)、[当日の日誌](research_log/2026-11-24.md)に詳細を保存。大きな生JSON/QASMは実行ディレクトリの`artifacts.zip`に格納し、ハッシュ一覧を付けている。
+
+## 第1段階の実測結果 — 2026-11-24
 
 **[33回路の結果と考察を読む](reports/stage1_2026-11-24.md)** · **[全99条件の表](analysis/stage1-20261124T012423Z/all_results.md)** · **[生CSV](runs/stage1-20261124T012423Z/results.csv)**
 
 5ファミリー・33入力のOriginal／Gate-only／ZX比較を実行した。全99条件で数値的等価性を確認し、Clifford＋Tの30入力中12入力で、Gate-onlyに対してTを増やさず2Qを削減した。一方、今回の8量子ビット11入力はすべて2Qが増加した。回路の種類だけで有効性を決めず、規模・密度・後処理の影響を追加検証する。
 
-実行IDは `stage1-20261124T012423Z`、固定コードは [`5101804`](https://github.com/Ryoki39-hash/ZX-calculus/commit/5101804b3db69b5b0e09f872849a8acb1d2313c9)。[再現手順](benchmarks/broad_screening/README.md)、[当日の研究日誌](research_log/2026-11-24.md)、[第2段階の追加検証計画](docs/stage2_followup_plan.md)を参照。第2段階は計画であり、まだ実行していない。
+実行IDは `stage1-20261124T012423Z`、固定コードは [`5101804`](https://github.com/Ryoki39-hash/ZX-calculus/commit/5101804b3db69b5b0e09f872849a8acb1d2313c9)。[再現手順](benchmarks/broad_screening/README.md)、[当日の研究日誌](research_log/2026-11-24.md)、[第2段階の追加検証計画](docs/stage2_followup_plan.md)を参照。第2段階は同日16:05 JSTに実行済みで、上記の追試レポートに分離している。
 
 ## 研究計画
 
@@ -35,7 +45,7 @@ English working title: **Circuit-Dependent Effectiveness of ZX-Calculus-Based Qu
 
 主比較表は **33入力×3条件＝99行**です。ZX抽出は33入力につき1設定の33候補条件で、時間反復は別に数えます。独立した99回路を用意するという意味ではありません。
 
-**直近の着手順：** 第1段階の実測・集計に続き、[第2段階の計画](docs/stage2_followup_plan.md)に従って未使用シードと新サイズで再現性を確認する。Backward／Reverse抽出は追加しない。
+**直近の着手順：** 実行済みの第1・第2段階を卒論の結果・考察へ統合し、有効例・無効例・不支持の仮説を並べる。外部環境での再現確認、より強い位相構造ベースラインとの比較は次の検討項目であり、今回の実行結果には含めない。
 
 ## 計画と実測記録の区別
 

@@ -61,3 +61,8 @@ Readable analysis tables and figures are under `analysis/RUN_ID/`; the report is
 ## Interpretation limits
 
 B2 reuse and unique circuits usually implement different unitaries and each is verified against its own input. Their active wires, support frequencies, connectivity and depths are recorded, not assumed equal. B3 has six active wires in the disjoint case and four in the cascade; overlap is therefore not isolated from active width. The cascade repeats a historical 4q ladder with idle wires. Toffoli 5q also appeared in the old pilot. L/n is only a density proxy; changing length changes other structure as well. Claims are restricted to the tested inputs, cost definitions and fixed PyZX pipeline.
+
+
+### Packaging command
+
+After a run has completed, `python analysis/package_run_artifacts.py RUN_ID` produces its verified deterministic ZIP and index. With `--diagnostics`, the same postprocessing tool archives the four complete diagnostic event JSONs into `analysis/RUN_ID/diagnostics/traces.zip`; summaries remain readable. This publication utility was added after measurement and is not part of the benchmark pipeline or its frozen source-hash set.

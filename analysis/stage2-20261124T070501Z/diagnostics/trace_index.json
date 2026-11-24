@@ -1,0 +1,44 @@
+{
+  "access": "Members are relative to analysis/RUN_ID/diagnostics. Unpack beside summary.json to inspect full event traces.",
+  "archive": "traces.zip",
+  "archive_bytes": 35817,
+  "archive_sha256": "08f4efeab2ad492064ea69993cb8e833957f3fe477ce3b33650fd2447984b0c5",
+  "code_commit": "b309dd8f7ec1a8799b0a9a79b1ffee089d71cc97",
+  "direct_files": {
+    "metadata.json": {
+      "bytes": 5259,
+      "sha256": "44b2b57104c1deb923cb7776a194fa181b90c206646b982e15bb4ed6363cac18"
+    },
+    "summary.json": {
+      "bytes": 35090,
+      "sha256": "d59fe84c36c4d5c6bfa48cea393b01987a616cad013e9cf3217710e174c2dbf6"
+    },
+    "summary.md": {
+      "bytes": 1506,
+      "sha256": "7b9a8957f5777bbef6a0b298d1e5e37b39611dd181562aa56b32141173f0659c"
+    }
+  },
+  "format": "zx-diagnostic-artifact-index-v1",
+  "member_count": 4,
+  "members": {
+    "stage2_phase_4q_L80_s100.json": {
+      "bytes": 36635,
+      "sha256": "af6a8d4f977553995df07ba0c96fd096584a9610c6d11f8a7a410ab413f5f4a4"
+    },
+    "stage2_phase_8q_L80_s100.json": {
+      "bytes": 216423,
+      "sha256": "39330a8c068a124cfb938ed1d4c390b706220113bcd636f99ced80fb1f1a2088"
+    },
+    "stage2_qft_5q.json": {
+      "bytes": 152590,
+      "sha256": "96f4bb6d199843343fef91cd8638346a3c61a57d516599a1a30c1990d73fca96"
+    },
+    "stage2_tof_ladder_5q.json": {
+      "bytes": 178162,
+      "sha256": "703e6215325a80243aac379b9d6e03bcec7b2cb15ddc5ce8949e6c10943fa6bf"
+    }
+  },
+  "preservation": "All ZIP members are byte-identical copies; no measured artifacts were changed.",
+  "run_id": "stage2-20261124T070501Z",
+  "uncompressed_bytes": 583810
+}
