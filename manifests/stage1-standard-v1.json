@@ -1,0 +1,1584 @@
+{
+  "protocol_id": "stage1-standard-v1",
+  "created_utc": "2026-11-24T01:19:45.578566+00:00",
+  "research_plan_commit": "36d01bff08f5fade7b1151872c9c48171a10635c",
+  "count": 33,
+  "family_counts": {
+    "qft": 3,
+    "toffoli_ladder": 3,
+    "phase": 9,
+    "pauli": 9,
+    "clifford_t": 9
+  },
+  "inputs": [
+    {
+      "circuit_id": "qft_4q",
+      "family": "qft",
+      "qubits": 4,
+      "seed": null,
+      "repetitions": null,
+      "definition_version": "broad-screening-circuits-v1",
+      "generator_parameters": {
+        "generator": "positive_phase_qft_v1",
+        "chronological_rule": "for i=0..n-1: H(i), then CP(control=j,target=i,phase_pi=1/2**(j-i)) for j=i+1..n-1",
+        "final_swaps": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "fourier_sign": 1,
+        "t_count_reason": "general-angle exact QFT; no approximate Clifford+T synthesis"
+      },
+      "t_count_applicable": false,
+      "convention": {
+        "wire_order": "q0 is the most significant bit; fixed input/output order",
+        "pyzx_phase_unit": "pi",
+        "input_status": "raw generated input; no optimizer applied"
+      },
+      "raw_qasm_sha256": "a542ddc40cf7d7920a92843d1369473e5bf62d939ded77caec62cfc937cbe6ee",
+      "normalized_qasm_sha256": "ded8f92d6ca7bda61c5817ebb07a06c4584f1424a10ce84c99593e91b373a81b"
+    },
+    {
+      "circuit_id": "qft_6q",
+      "family": "qft",
+      "qubits": 6,
+      "seed": null,
+      "repetitions": null,
+      "definition_version": "broad-screening-circuits-v1",
+      "generator_parameters": {
+        "generator": "positive_phase_qft_v1",
+        "chronological_rule": "for i=0..n-1: H(i), then CP(control=j,target=i,phase_pi=1/2**(j-i)) for j=i+1..n-1",
+        "final_swaps": [
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "fourier_sign": 1,
+        "t_count_reason": "general-angle exact QFT; no approximate Clifford+T synthesis"
+      },
+      "t_count_applicable": false,
+      "convention": {
+        "wire_order": "q0 is the most significant bit; fixed input/output order",
+        "pyzx_phase_unit": "pi",
+        "input_status": "raw generated input; no optimizer applied"
+      },
+      "raw_qasm_sha256": "cee337718c1e3e2f1f8d0629052e07b7605d21249239d8d2d602dd5639564db7",
+      "normalized_qasm_sha256": "52a1a14eec8c55957c40bdce780c4ce8357a21eabfc2f86881879b812acbb88f"
+    },
+    {
+      "circuit_id": "qft_8q",
+      "family": "qft",
+      "qubits": 8,
+      "seed": null,
+      "repetitions": null,
+      "definition_version": "broad-screening-circuits-v1",
+      "generator_parameters": {
+        "generator": "positive_phase_qft_v1",
+        "chronological_rule": "for i=0..n-1: H(i), then CP(control=j,target=i,phase_pi=1/2**(j-i)) for j=i+1..n-1",
+        "final_swaps": [
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "fourier_sign": 1,
+        "t_count_reason": "general-angle exact QFT; no approximate Clifford+T synthesis"
+      },
+      "t_count_applicable": false,
+      "convention": {
+        "wire_order": "q0 is the most significant bit; fixed input/output order",
+        "pyzx_phase_unit": "pi",
+        "input_status": "raw generated input; no optimizer applied"
+      },
+      "raw_qasm_sha256": "44447963243c08293d3506cc21d4827dc45705f003e90f14028dd14e361be5de",
+      "normalized_qasm_sha256": "5f96c1429700da84f65a1ef6c0ae09c4c4176576ee04f104debdcb912fbb7e1b"
+    },
+    {
+      "circuit_id": "tof_ladder_4q",
+      "family": "toffoli_ladder",
+      "qubits": 4,
+      "seed": null,
+      "repetitions": null,
+      "definition_version": "broad-screening-circuits-v1",
+      "generator_parameters": {
+        "generator": "overlapping_toffoli_ladder_v1",
+        "chronological_ccx": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            1,
+            2,
+            3
+          ]
+        ],
+        "pyzx_raw_gate": "TOF",
+        "arithmetic_representativeness": "synthetic ladder only"
+      },
+      "t_count_applicable": true,
+      "convention": {
+        "wire_order": "q0 is the most significant bit; fixed input/output order",
+        "pyzx_phase_unit": "pi",
+        "input_status": "raw generated input; no optimizer applied"
+      },
+      "raw_qasm_sha256": "b432e363ae420b77b3e3a87509a7843342f5a77b23b5f4062fac50b5e60806a8",
+      "normalized_qasm_sha256": "f96d89e43dcec8aa962798125b56cea6e828a07ba97d74e1371b29a896aca058"
+    },
+    {
+      "circuit_id": "tof_ladder_6q",
+      "family": "toffoli_ladder",
+      "qubits": 6,
+      "seed": null,
+      "repetitions": null,
+      "definition_version": "broad-screening-circuits-v1",
+      "generator_parameters": {
+        "generator": "overlapping_toffoli_ladder_v1",
+        "chronological_ccx": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            2,
+            3,
+            4
+          ],
+          [
+            3,
+            4,
+            5
+          ]
+        ],
+        "pyzx_raw_gate": "TOF",
+        "arithmetic_representativeness": "synthetic ladder only"
+      },
+      "t_count_applicable": true,
+      "convention": {
+        "wire_order": "q0 is the most significant bit; fixed input/output order",
+        "pyzx_phase_unit": "pi",
+        "input_status": "raw generated input; no optimizer applied"
+      },
+      "raw_qasm_sha256": "6d6c679721a80135a1175bb6b67c46cda56e50655bee1e370c118ab320f7310a",
+      "normalized_qasm_sha256": "6df3fbd71f1320c7ecb3525f63c95bc6a8e878d6b6f92c4c3065ba6c0acac7e1"
+    },
+    {
+      "circuit_id": "tof_ladder_8q",
+      "family": "toffoli_ladder",
+      "qubits": 8,
+      "seed": null,
+      "repetitions": null,
+      "definition_version": "broad-screening-circuits-v1",
+      "generator_parameters": {
+        "generator": "overlapping_toffoli_ladder_v1",
+        "chronological_ccx": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            2,
+            3,
+            4
+          ],
+          [
+            3,
+            4,
+            5
+          ],
+          [
+            4,
+            5,
+            6
+          ],
+          [
+            5,
+            6,
+            7
+          ]
+        ],
+        "pyzx_raw_gate": "TOF",
+        "arithmetic_representativeness": "synthetic ladder only"
+      },
+      "t_count_applicable": true,
+      "convention": {
+        "wire_order": "q0 is the most significant bit; fixed input/output order",
+        "pyzx_phase_unit": "pi",
+        "input_status": "raw generated input; no optimizer applied"
+      },
+      "raw_qasm_sha256": "1214de1451731351f63eeda4371e51f2f38326e161fc220f0a336c94470591bd",
+      "normalized_qasm_sha256": "a4cf8248a12675f0aae928ad6823fe115ae9acfc0b34df62fbc72deef2a3b291"
+    },
+    {
+      "circuit_id": "phase_4q_s0",
+      "family": "phase",
+      "qubits": 4,
+      "seed": 0,
+      "repetitions": null,
+      "definition_version": "broad-screening-circuits-v1",
+      "generator_parameters": {
+        "generator": "random_cnot_zphase_v1",
+        "operations": 80,
+        "p_phase": 0.4,
+        "p_cnot": 0.6,
+        "phase_numerators": [
+          -3,
+          -2,
+          -1,
+          1,
+          2,
+          3
+        ],
+        "phase_denominator": 4,
+        "rng": "random.Random(seed)",
+        "draw_order": "per operation draw rng.random(); if <0.4 draw target=rng.randrange(n), then numerator=rng.choice([-3,-2,-1,1,2,3]); otherwise draw [control,target]=rng.sample(range(n),2)",
+        "cnot_connectivity": "uniform ordered distinct qubit pair; all-to-all",
+        "input_filtering": "none; accidental repetitions/cancellations retained"
+      },
+      "t_count_applicable": true,
+      "convention": {
+        "wire_order": "q0 is the most significant bit; fixed input/output order",
+        "pyzx_phase_unit": "pi",
+        "input_status": "raw generated input; no optimizer applied"
+      },
+      "raw_qasm_sha256": "8b64acddf0ee8d17154b9e8484285fd9c778dc23fd3a0aeb2713f083a8ba3574",
+      "normalized_qasm_sha256": "7665652a0a3a3627c3231393ac1db8052b990a6dbe3e85e3e5cef005f1ce3c9e"
+    },
+    {
+      "circuit_id": "phase_4q_s1",
+      "family": "phase",
+      "qubits": 4,
+      "seed": 1,
+      "repetitions": null,
+      "definition_version": "broad-screening-circuits-v1",
+      "generator_parameters": {
+        "generator": "random_cnot_zphase_v1",
+        "operations": 80,
+        "p_phase": 0.4,
+        "p_cnot": 0.6,
+        "phase_numerators": [
+          -3,
+          -2,
+          -1,
+          1,
+          2,
+          3
+        ],
+        "phase_denominator": 4,
+        "rng": "random.Random(seed)",
+        "draw_order": "per operation draw rng.random(); if <0.4 draw target=rng.randrange(n), then numerator=rng.choice([-3,-2,-1,1,2,3]); otherwise draw [control,target]=rng.sample(range(n),2)",
+        "cnot_connectivity": "uniform ordered distinct qubit pair; all-to-all",
+        "input_filtering": "none; accidental repetitions/cancellations retained"
+      },
+      "t_count_applicable": true,
+      "convention": {
+        "wire_order": "q0 is the most significant bit; fixed input/output order",
+        "pyzx_phase_unit": "pi",
+        "input_status": "raw generated input; no optimizer applied"
+      },
+      "raw_qasm_sha256": "a654fda0762812c865e157e3198f9810dc222dfc1ed470e06e09923b2d8bffd8",
+      "normalized_qasm_sha256": "1fabb36f8c64a0dcb47037e5dfe8b040008fb73ffecaae094d831d5db31c7c55"
+    },
+    {
+      "circuit_id": "phase_4q_s2",
+      "family": "phase",
+      "qubits": 4,
+      "seed": 2,
+      "repetitions": null,
+      "definition_version": "broad-screening-circuits-v1",
+      "generator_parameters": {
+        "generator": "random_cnot_zphase_v1",
+        "operations": 80,
+        "p_phase": 0.4,
+        "p_cnot": 0.6,
+        "phase_numerators": [
+          -3,
+          -2,
+          -1,
+          1,
+          2,
+          3
+        ],
+        "phase_denominator": 4,
+        "rng": "random.Random(seed)",
+        "draw_order": "per operation draw rng.random(); if <0.4 draw target=rng.randrange(n), then numerator=rng.choice([-3,-2,-1,1,2,3]); otherwise draw [control,target]=rng.sample(range(n),2)",
+        "cnot_connectivity": "uniform ordered distinct qubit pair; all-to-all",
+        "input_filtering": "none; accidental repetitions/cancellations retained"
+      },
+      "t_count_applicable": true,
+      "convention": {
+        "wire_order": "q0 is the most significant bit; fixed input/output order",
+        "pyzx_phase_unit": "pi",
+        "input_status": "raw generated input; no optimizer applied"
+      },
+      "raw_qasm_sha256": "cdf6fd8f42c3bf03b940b517978f42f46ef37ee7c07330ec898ed6d012702ef0",
+      "normalized_qasm_sha256": "1e81ae339b70c4f40bd4a5da41a300b4c3d5e431533cb7363ccfe61120bf7f4d"
+    },
+    {
+      "circuit_id": "phase_6q_s0",
+      "family": "phase",
+      "qubits": 6,
+      "seed": 0,
+      "repetitions": null,
+      "definition_version": "broad-screening-circuits-v1",
+      "generator_parameters": {
+        "generator": "random_cnot_zphase_v1",
+        "operations": 80,
+        "p_phase": 0.4,
+        "p_cnot": 0.6,
+        "phase_numerators": [
+          -3,
+          -2,
+          -1,
+          1,
+          2,
+          3
+        ],
+        "phase_denominator": 4,
+        "rng": "random.Random(seed)",
+        "draw_order": "per operation draw rng.random(); if <0.4 draw target=rng.randrange(n), then numerator=rng.choice([-3,-2,-1,1,2,3]); otherwise draw [control,target]=rng.sample(range(n),2)",
+        "cnot_connectivity": "uniform ordered distinct qubit pair; all-to-all",
+        "input_filtering": "none; accidental repetitions/cancellations retained"
+      },
+      "t_count_applicable": true,
+      "convention": {
+        "wire_order": "q0 is the most significant bit; fixed input/output order",
+        "pyzx_phase_unit": "pi",
+        "input_status": "raw generated input; no optimizer applied"
+      },
+      "raw_qasm_sha256": "1634b3914813498916a821fa4d697a5979a19ea51ff05d8d5fe05253ceed8096",
+      "normalized_qasm_sha256": "12d8ffda6dffc259d02d8a7013f87f319ab2306288401205b0e4b59202712187"
+    },
+    {
+      "circuit_id": "phase_6q_s1",
+      "family": "phase",
+      "qubits": 6,
+      "seed": 1,
+      "repetitions": null,
+      "definition_version": "broad-screening-circuits-v1",
+      "generator_parameters": {
+        "generator": "random_cnot_zphase_v1",
+        "operations": 80,
+        "p_phase": 0.4,
+        "p_cnot": 0.6,
+        "phase_numerators": [
+          -3,
+          -2,
+          -1,
+          1,
+          2,
+          3
+        ],
+        "phase_denominator": 4,
+        "rng": "random.Random(seed)",
+        "draw_order": "per operation draw rng.random(); if <0.4 draw target=rng.randrange(n), then numerator=rng.choice([-3,-2,-1,1,2,3]); otherwise draw [control,target]=rng.sample(range(n),2)",
+        "cnot_connectivity": "uniform ordered distinct qubit pair; all-to-all",
+        "input_filtering": "none; accidental repetitions/cancellations retained"
+      },
+      "t_count_applicable": true,
+      "convention": {
+        "wire_order": "q0 is the most significant bit; fixed input/output order",
+        "pyzx_phase_unit": "pi",
+        "input_status": "raw generated input; no optimizer applied"
+      },
+      "raw_qasm_sha256": "f240caeb868819eae6c579f2c9cdb864ea9fa2597e0029d7d82159849ddabc36",
+      "normalized_qasm_sha256": "3176db89cfc7cb5f78a989a018a34e7112418a20617ad866ad6de7cc6c6492f5"
+    },
+    {
+      "circuit_id": "phase_6q_s2",
+      "family": "phase",
+      "qubits": 6,
+      "seed": 2,
+      "repetitions": null,
+      "definition_version": "broad-screening-circuits-v1",
+      "generator_parameters": {
+        "generator": "random_cnot_zphase_v1",
+        "operations": 80,
+        "p_phase": 0.4,
+        "p_cnot": 0.6,
+        "phase_numerators": [
+          -3,
+          -2,
+          -1,
+          1,
+          2,
+          3
+        ],
+        "phase_denominator": 4,
+        "rng": "random.Random(seed)",
+        "draw_order": "per operation draw rng.random(); if <0.4 draw target=rng.randrange(n), then numerator=rng.choice([-3,-2,-1,1,2,3]); otherwise draw [control,target]=rng.sample(range(n),2)",
+        "cnot_connectivity": "uniform ordered distinct qubit pair; all-to-all",
+        "input_filtering": "none; accidental repetitions/cancellations retained"
+      },
+      "t_count_applicable": true,
+      "convention": {
+        "wire_order": "q0 is the most significant bit; fixed input/output order",
+        "pyzx_phase_unit": "pi",
+        "input_status": "raw generated input; no optimizer applied"
+      },
+      "raw_qasm_sha256": "20f2d7ea32a2e9ba0be286e0c80b0ca99f929adc7f54f9d073a75feb547f5216",
+      "normalized_qasm_sha256": "805efc7fb2d50a1fce5f29d4925683df085d2af84e900e9ec920dfb4bff21fc5"
+    },
+    {
+      "circuit_id": "phase_8q_s0",
+      "family": "phase",
+      "qubits": 8,
+      "seed": 0,
+      "repetitions": null,
+      "definition_version": "broad-screening-circuits-v1",
+      "generator_parameters": {
+        "generator": "random_cnot_zphase_v1",
+        "operations": 80,
+        "p_phase": 0.4,
+        "p_cnot": 0.6,
+        "phase_numerators": [
+          -3,
+          -2,
+          -1,
+          1,
+          2,
+          3
+        ],
+        "phase_denominator": 4,
+        "rng": "random.Random(seed)",
+        "draw_order": "per operation draw rng.random(); if <0.4 draw target=rng.randrange(n), then numerator=rng.choice([-3,-2,-1,1,2,3]); otherwise draw [control,target]=rng.sample(range(n),2)",
+        "cnot_connectivity": "uniform ordered distinct qubit pair; all-to-all",
+        "input_filtering": "none; accidental repetitions/cancellations retained"
+      },
+      "t_count_applicable": true,
+      "convention": {
+        "wire_order": "q0 is the most significant bit; fixed input/output order",
+        "pyzx_phase_unit": "pi",
+        "input_status": "raw generated input; no optimizer applied"
+      },
+      "raw_qasm_sha256": "4a1e86173e3e063b7cb5f611e729d8c7f39b47c1123df643b46ce41e30e5ceab",
+      "normalized_qasm_sha256": "1f19349ebcc14536b8246dd9b991bccb21fe6c399143be41dcdb710cb89fa44a"
+    },
+    {
+      "circuit_id": "phase_8q_s1",
+      "family": "phase",
+      "qubits": 8,
+      "seed": 1,
+      "repetitions": null,
+      "definition_version": "broad-screening-circuits-v1",
+      "generator_parameters": {
+        "generator": "random_cnot_zphase_v1",
+        "operations": 80,
+        "p_phase": 0.4,
+        "p_cnot": 0.6,
+        "phase_numerators": [
+          -3,
+          -2,
+          -1,
+          1,
+          2,
+          3
+        ],
+        "phase_denominator": 4,
+        "rng": "random.Random(seed)",
+        "draw_order": "per operation draw rng.random(); if <0.4 draw target=rng.randrange(n), then numerator=rng.choice([-3,-2,-1,1,2,3]); otherwise draw [control,target]=rng.sample(range(n),2)",
+        "cnot_connectivity": "uniform ordered distinct qubit pair; all-to-all",
+        "input_filtering": "none; accidental repetitions/cancellations retained"
+      },
+      "t_count_applicable": true,
+      "convention": {
+        "wire_order": "q0 is the most significant bit; fixed input/output order",
+        "pyzx_phase_unit": "pi",
+        "input_status": "raw generated input; no optimizer applied"
+      },
+      "raw_qasm_sha256": "8dd318d03f40419266efe3d0c3d4044a797bebeba132f8ba9eac40e3605d8500",
+      "normalized_qasm_sha256": "0124eddcb3fdf6044573f0cb662740dcca1b099d1c1b4eafc9ec03ae64170bd8"
+    },
+    {
+      "circuit_id": "phase_8q_s2",
+      "family": "phase",
+      "qubits": 8,
+      "seed": 2,
+      "repetitions": null,
+      "definition_version": "broad-screening-circuits-v1",
+      "generator_parameters": {
+        "generator": "random_cnot_zphase_v1",
+        "operations": 80,
+        "p_phase": 0.4,
+        "p_cnot": 0.6,
+        "phase_numerators": [
+          -3,
+          -2,
+          -1,
+          1,
+          2,
+          3
+        ],
+        "phase_denominator": 4,
+        "rng": "random.Random(seed)",
+        "draw_order": "per operation draw rng.random(); if <0.4 draw target=rng.randrange(n), then numerator=rng.choice([-3,-2,-1,1,2,3]); otherwise draw [control,target]=rng.sample(range(n),2)",
+        "cnot_connectivity": "uniform ordered distinct qubit pair; all-to-all",
+        "input_filtering": "none; accidental repetitions/cancellations retained"
+      },
+      "t_count_applicable": true,
+      "convention": {
+        "wire_order": "q0 is the most significant bit; fixed input/output order",
+        "pyzx_phase_unit": "pi",
+        "input_status": "raw generated input; no optimizer applied"
+      },
+      "raw_qasm_sha256": "0414574217f24acd5271ba68135b0749da37c97bd9e8cee368e51a549f192ea9",
+      "normalized_qasm_sha256": "918666056bfbeae45c7040646717130ff3134cf6fedce430f96925d289b7c1f3"
+    },
+    {
+      "circuit_id": "pauli_4q_r2",
+      "family": "pauli",
+      "qubits": 4,
+      "seed": null,
+      "repetitions": 2,
+      "definition_version": "broad-screening-circuits-v1",
+      "generator_parameters": {
+        "generator": "repeated_mixed_pauli_block_v1",
+        "rotation_definition": "R_P(theta)=exp(-i*theta*P/2)",
+        "chronological_block": [
+          {
+            "qubits": [
+              0,
+              1
+            ],
+            "axis": "ZZ",
+            "theta_pi": [
+              1,
+              4
+            ]
+          },
+          {
+            "qubits": [
+              1,
+              2
+            ],
+            "axis": "XX",
+            "theta_pi": [
+              1,
+              4
+            ]
+          },
+          {
+            "qubits": [
+              2,
+              3
+            ],
+            "axis": "ZZ",
+            "theta_pi": [
+              -1,
+              4
+            ]
+          }
+        ],
+        "block_repetitions": 2,
+        "block_order": "increasing adjacent-pair index k; repeat whole block",
+        "decomposition": "ZZ: CNOT(a,b), ZPhase(b,theta/pi), CNOT(a,b); XX: H(a),H(b),ZZ-gadget,H(a),H(b)",
+        "implemented_unitary": "exp(i*pi*global_phase_relative_to_RP_product_pi)*RP_product",
+        "global_phase_relative_to_RP_product_pi": [
+          1,
+          4
+        ],
+        "chemistry_representativeness": "synthetic mixed-axis block only"
+      },
+      "t_count_applicable": true,
+      "convention": {
+        "wire_order": "q0 is the most significant bit; fixed input/output order",
+        "pyzx_phase_unit": "pi",
+        "input_status": "raw generated input; no optimizer applied"
+      },
+      "raw_qasm_sha256": "dc2efe1c91c0790a9d3c3712ba8fe76ff5dbffd9f4f99f944703c295b93e1188",
+      "normalized_qasm_sha256": "39ca1e900728277bc5bff55c1980b70800cf30cc6dfc39667ed91c2471e64ff5"
+    },
+    {
+      "circuit_id": "pauli_4q_r4",
+      "family": "pauli",
+      "qubits": 4,
+      "seed": null,
+      "repetitions": 4,
+      "definition_version": "broad-screening-circuits-v1",
+      "generator_parameters": {
+        "generator": "repeated_mixed_pauli_block_v1",
+        "rotation_definition": "R_P(theta)=exp(-i*theta*P/2)",
+        "chronological_block": [
+          {
+            "qubits": [
+              0,
+              1
+            ],
+            "axis": "ZZ",
+            "theta_pi": [
+              1,
+              4
+            ]
+          },
+          {
+            "qubits": [
+              1,
+              2
+            ],
+            "axis": "XX",
+            "theta_pi": [
+              1,
+              4
+            ]
+          },
+          {
+            "qubits": [
+              2,
+              3
+            ],
+            "axis": "ZZ",
+            "theta_pi": [
+              -1,
+              4
+            ]
+          }
+        ],
+        "block_repetitions": 4,
+        "block_order": "increasing adjacent-pair index k; repeat whole block",
+        "decomposition": "ZZ: CNOT(a,b), ZPhase(b,theta/pi), CNOT(a,b); XX: H(a),H(b),ZZ-gadget,H(a),H(b)",
+        "implemented_unitary": "exp(i*pi*global_phase_relative_to_RP_product_pi)*RP_product",
+        "global_phase_relative_to_RP_product_pi": [
+          1,
+          2
+        ],
+        "chemistry_representativeness": "synthetic mixed-axis block only"
+      },
+      "t_count_applicable": true,
+      "convention": {
+        "wire_order": "q0 is the most significant bit; fixed input/output order",
+        "pyzx_phase_unit": "pi",
+        "input_status": "raw generated input; no optimizer applied"
+      },
+      "raw_qasm_sha256": "8cfa0c746ec0116a8785f537f4a4ba4cff99e9dd0d50ed7e7f1f11467ee00ef8",
+      "normalized_qasm_sha256": "17e094d93543511bafbd96ee23b0618fc6e40971212bcf1a4689c4cef8cebc0b"
+    },
+    {
+      "circuit_id": "pauli_4q_r8",
+      "family": "pauli",
+      "qubits": 4,
+      "seed": null,
+      "repetitions": 8,
+      "definition_version": "broad-screening-circuits-v1",
+      "generator_parameters": {
+        "generator": "repeated_mixed_pauli_block_v1",
+        "rotation_definition": "R_P(theta)=exp(-i*theta*P/2)",
+        "chronological_block": [
+          {
+            "qubits": [
+              0,
+              1
+            ],
+            "axis": "ZZ",
+            "theta_pi": [
+              1,
+              4
+            ]
+          },
+          {
+            "qubits": [
+              1,
+              2
+            ],
+            "axis": "XX",
+            "theta_pi": [
+              1,
+              4
+            ]
+          },
+          {
+            "qubits": [
+              2,
+              3
+            ],
+            "axis": "ZZ",
+            "theta_pi": [
+              -1,
+              4
+            ]
+          }
+        ],
+        "block_repetitions": 8,
+        "block_order": "increasing adjacent-pair index k; repeat whole block",
+        "decomposition": "ZZ: CNOT(a,b), ZPhase(b,theta/pi), CNOT(a,b); XX: H(a),H(b),ZZ-gadget,H(a),H(b)",
+        "implemented_unitary": "exp(i*pi*global_phase_relative_to_RP_product_pi)*RP_product",
+        "global_phase_relative_to_RP_product_pi": [
+          1,
+          1
+        ],
+        "chemistry_representativeness": "synthetic mixed-axis block only"
+      },
+      "t_count_applicable": true,
+      "convention": {
+        "wire_order": "q0 is the most significant bit; fixed input/output order",
+        "pyzx_phase_unit": "pi",
+        "input_status": "raw generated input; no optimizer applied"
+      },
+      "raw_qasm_sha256": "c00b62871af03020d8438d557032912a0952bff4e367cd82584ad8db61b539d5",
+      "normalized_qasm_sha256": "4582edf18e82a3fbf6ac809fb8312c4fef81ba32253c7fb44b17829e326e389c"
+    },
+    {
+      "circuit_id": "pauli_6q_r2",
+      "family": "pauli",
+      "qubits": 6,
+      "seed": null,
+      "repetitions": 2,
+      "definition_version": "broad-screening-circuits-v1",
+      "generator_parameters": {
+        "generator": "repeated_mixed_pauli_block_v1",
+        "rotation_definition": "R_P(theta)=exp(-i*theta*P/2)",
+        "chronological_block": [
+          {
+            "qubits": [
+              0,
+              1
+            ],
+            "axis": "ZZ",
+            "theta_pi": [
+              1,
+              4
+            ]
+          },
+          {
+            "qubits": [
+              1,
+              2
+            ],
+            "axis": "XX",
+            "theta_pi": [
+              1,
+              4
+            ]
+          },
+          {
+            "qubits": [
+              2,
+              3
+            ],
+            "axis": "ZZ",
+            "theta_pi": [
+              -1,
+              4
+            ]
+          },
+          {
+            "qubits": [
+              3,
+              4
+            ],
+            "axis": "XX",
+            "theta_pi": [
+              -1,
+              4
+            ]
+          },
+          {
+            "qubits": [
+              4,
+              5
+            ],
+            "axis": "ZZ",
+            "theta_pi": [
+              1,
+              4
+            ]
+          }
+        ],
+        "block_repetitions": 2,
+        "block_order": "increasing adjacent-pair index k; repeat whole block",
+        "decomposition": "ZZ: CNOT(a,b), ZPhase(b,theta/pi), CNOT(a,b); XX: H(a),H(b),ZZ-gadget,H(a),H(b)",
+        "implemented_unitary": "exp(i*pi*global_phase_relative_to_RP_product_pi)*RP_product",
+        "global_phase_relative_to_RP_product_pi": [
+          1,
+          4
+        ],
+        "chemistry_representativeness": "synthetic mixed-axis block only"
+      },
+      "t_count_applicable": true,
+      "convention": {
+        "wire_order": "q0 is the most significant bit; fixed input/output order",
+        "pyzx_phase_unit": "pi",
+        "input_status": "raw generated input; no optimizer applied"
+      },
+      "raw_qasm_sha256": "2d5844022c8ae1880e0b9f3ea2d85e21b01038ec825756d0be57c030765970bd",
+      "normalized_qasm_sha256": "c3dd233468c0edfb6d5851bf747cd6b749b507a8d14edc0feb6775ae44fd0da8"
+    },
+    {
+      "circuit_id": "pauli_6q_r4",
+      "family": "pauli",
+      "qubits": 6,
+      "seed": null,
+      "repetitions": 4,
+      "definition_version": "broad-screening-circuits-v1",
+      "generator_parameters": {
+        "generator": "repeated_mixed_pauli_block_v1",
+        "rotation_definition": "R_P(theta)=exp(-i*theta*P/2)",
+        "chronological_block": [
+          {
+            "qubits": [
+              0,
+              1
+            ],
+            "axis": "ZZ",
+            "theta_pi": [
+              1,
+              4
+            ]
+          },
+          {
+            "qubits": [
+              1,
+              2
+            ],
+            "axis": "XX",
+            "theta_pi": [
+              1,
+              4
+            ]
+          },
+          {
+            "qubits": [
+              2,
+              3
+            ],
+            "axis": "ZZ",
+            "theta_pi": [
+              -1,
+              4
+            ]
+          },
+          {
+            "qubits": [
+              3,
+              4
+            ],
+            "axis": "XX",
+            "theta_pi": [
+              -1,
+              4
+            ]
+          },
+          {
+            "qubits": [
+              4,
+              5
+            ],
+            "axis": "ZZ",
+            "theta_pi": [
+              1,
+              4
+            ]
+          }
+        ],
+        "block_repetitions": 4,
+        "block_order": "increasing adjacent-pair index k; repeat whole block",
+        "decomposition": "ZZ: CNOT(a,b), ZPhase(b,theta/pi), CNOT(a,b); XX: H(a),H(b),ZZ-gadget,H(a),H(b)",
+        "implemented_unitary": "exp(i*pi*global_phase_relative_to_RP_product_pi)*RP_product",
+        "global_phase_relative_to_RP_product_pi": [
+          1,
+          2
+        ],
+        "chemistry_representativeness": "synthetic mixed-axis block only"
+      },
+      "t_count_applicable": true,
+      "convention": {
+        "wire_order": "q0 is the most significant bit; fixed input/output order",
+        "pyzx_phase_unit": "pi",
+        "input_status": "raw generated input; no optimizer applied"
+      },
+      "raw_qasm_sha256": "217454213158d4958f598448b4fd31ad691e8eaecdacb7e7deb98fd1aa5536b9",
+      "normalized_qasm_sha256": "5f5b15420cc77f2abfe82ed12510ef5ff0d1150747ec0d86703350e118b609ed"
+    },
+    {
+      "circuit_id": "pauli_6q_r8",
+      "family": "pauli",
+      "qubits": 6,
+      "seed": null,
+      "repetitions": 8,
+      "definition_version": "broad-screening-circuits-v1",
+      "generator_parameters": {
+        "generator": "repeated_mixed_pauli_block_v1",
+        "rotation_definition": "R_P(theta)=exp(-i*theta*P/2)",
+        "chronological_block": [
+          {
+            "qubits": [
+              0,
+              1
+            ],
+            "axis": "ZZ",
+            "theta_pi": [
+              1,
+              4
+            ]
+          },
+          {
+            "qubits": [
+              1,
+              2
+            ],
+            "axis": "XX",
+            "theta_pi": [
+              1,
+              4
+            ]
+          },
+          {
+            "qubits": [
+              2,
+              3
+            ],
+            "axis": "ZZ",
+            "theta_pi": [
+              -1,
+              4
+            ]
+          },
+          {
+            "qubits": [
+              3,
+              4
+            ],
+            "axis": "XX",
+            "theta_pi": [
+              -1,
+              4
+            ]
+          },
+          {
+            "qubits": [
+              4,
+              5
+            ],
+            "axis": "ZZ",
+            "theta_pi": [
+              1,
+              4
+            ]
+          }
+        ],
+        "block_repetitions": 8,
+        "block_order": "increasing adjacent-pair index k; repeat whole block",
+        "decomposition": "ZZ: CNOT(a,b), ZPhase(b,theta/pi), CNOT(a,b); XX: H(a),H(b),ZZ-gadget,H(a),H(b)",
+        "implemented_unitary": "exp(i*pi*global_phase_relative_to_RP_product_pi)*RP_product",
+        "global_phase_relative_to_RP_product_pi": [
+          1,
+          1
+        ],
+        "chemistry_representativeness": "synthetic mixed-axis block only"
+      },
+      "t_count_applicable": true,
+      "convention": {
+        "wire_order": "q0 is the most significant bit; fixed input/output order",
+        "pyzx_phase_unit": "pi",
+        "input_status": "raw generated input; no optimizer applied"
+      },
+      "raw_qasm_sha256": "2d1bf5f2abe48d9c057ed7c374b71662b55c6d1f70497efad72786689106f01e",
+      "normalized_qasm_sha256": "5d5966acdfb5c1e55f6c88845412a16066c537e227b7f2f86786e7576bb921de"
+    },
+    {
+      "circuit_id": "pauli_8q_r2",
+      "family": "pauli",
+      "qubits": 8,
+      "seed": null,
+      "repetitions": 2,
+      "definition_version": "broad-screening-circuits-v1",
+      "generator_parameters": {
+        "generator": "repeated_mixed_pauli_block_v1",
+        "rotation_definition": "R_P(theta)=exp(-i*theta*P/2)",
+        "chronological_block": [
+          {
+            "qubits": [
+              0,
+              1
+            ],
+            "axis": "ZZ",
+            "theta_pi": [
+              1,
+              4
+            ]
+          },
+          {
+            "qubits": [
+              1,
+              2
+            ],
+            "axis": "XX",
+            "theta_pi": [
+              1,
+              4
+            ]
+          },
+          {
+            "qubits": [
+              2,
+              3
+            ],
+            "axis": "ZZ",
+            "theta_pi": [
+              -1,
+              4
+            ]
+          },
+          {
+            "qubits": [
+              3,
+              4
+            ],
+            "axis": "XX",
+            "theta_pi": [
+              -1,
+              4
+            ]
+          },
+          {
+            "qubits": [
+              4,
+              5
+            ],
+            "axis": "ZZ",
+            "theta_pi": [
+              1,
+              4
+            ]
+          },
+          {
+            "qubits": [
+              5,
+              6
+            ],
+            "axis": "XX",
+            "theta_pi": [
+              1,
+              4
+            ]
+          },
+          {
+            "qubits": [
+              6,
+              7
+            ],
+            "axis": "ZZ",
+            "theta_pi": [
+              -1,
+              4
+            ]
+          }
+        ],
+        "block_repetitions": 2,
+        "block_order": "increasing adjacent-pair index k; repeat whole block",
+        "decomposition": "ZZ: CNOT(a,b), ZPhase(b,theta/pi), CNOT(a,b); XX: H(a),H(b),ZZ-gadget,H(a),H(b)",
+        "implemented_unitary": "exp(i*pi*global_phase_relative_to_RP_product_pi)*RP_product",
+        "global_phase_relative_to_RP_product_pi": [
+          1,
+          4
+        ],
+        "chemistry_representativeness": "synthetic mixed-axis block only"
+      },
+      "t_count_applicable": true,
+      "convention": {
+        "wire_order": "q0 is the most significant bit; fixed input/output order",
+        "pyzx_phase_unit": "pi",
+        "input_status": "raw generated input; no optimizer applied"
+      },
+      "raw_qasm_sha256": "a5b8caeeea615048f613ef325f7928f0ac303a0c08e23cfe0c233c3005b3af2a",
+      "normalized_qasm_sha256": "887be916433e793797273fdce3614a058cb7114a3d8048b6dffb20c33b70ac8a"
+    },
+    {
+      "circuit_id": "pauli_8q_r4",
+      "family": "pauli",
+      "qubits": 8,
+      "seed": null,
+      "repetitions": 4,
+      "definition_version": "broad-screening-circuits-v1",
+      "generator_parameters": {
+        "generator": "repeated_mixed_pauli_block_v1",
+        "rotation_definition": "R_P(theta)=exp(-i*theta*P/2)",
+        "chronological_block": [
+          {
+            "qubits": [
+              0,
+              1
+            ],
+            "axis": "ZZ",
+            "theta_pi": [
+              1,
+              4
+            ]
+          },
+          {
+            "qubits": [
+              1,
+              2
+            ],
+            "axis": "XX",
+            "theta_pi": [
+              1,
+              4
+            ]
+          },
+          {
+            "qubits": [
+              2,
+              3
+            ],
+            "axis": "ZZ",
+            "theta_pi": [
+              -1,
+              4
+            ]
+          },
+          {
+            "qubits": [
+              3,
+              4
+            ],
+            "axis": "XX",
+            "theta_pi": [
+              -1,
+              4
+            ]
+          },
+          {
+            "qubits": [
+              4,
+              5
+            ],
+            "axis": "ZZ",
+            "theta_pi": [
+              1,
+              4
+            ]
+          },
+          {
+            "qubits": [
+              5,
+              6
+            ],
+            "axis": "XX",
+            "theta_pi": [
+              1,
+              4
+            ]
+          },
+          {
+            "qubits": [
+              6,
+              7
+            ],
+            "axis": "ZZ",
+            "theta_pi": [
+              -1,
+              4
+            ]
+          }
+        ],
+        "block_repetitions": 4,
+        "block_order": "increasing adjacent-pair index k; repeat whole block",
+        "decomposition": "ZZ: CNOT(a,b), ZPhase(b,theta/pi), CNOT(a,b); XX: H(a),H(b),ZZ-gadget,H(a),H(b)",
+        "implemented_unitary": "exp(i*pi*global_phase_relative_to_RP_product_pi)*RP_product",
+        "global_phase_relative_to_RP_product_pi": [
+          1,
+          2
+        ],
+        "chemistry_representativeness": "synthetic mixed-axis block only"
+      },
+      "t_count_applicable": true,
+      "convention": {
+        "wire_order": "q0 is the most significant bit; fixed input/output order",
+        "pyzx_phase_unit": "pi",
+        "input_status": "raw generated input; no optimizer applied"
+      },
+      "raw_qasm_sha256": "c9984d17b9ac91577e15201aa024150d3d648345c0f3620c0fd669d9f7936982",
+      "normalized_qasm_sha256": "1d55cd2002921e355504c3170b5cbecbc2900c05e2b5c3e98dd405c445e6dff1"
+    },
+    {
+      "circuit_id": "pauli_8q_r8",
+      "family": "pauli",
+      "qubits": 8,
+      "seed": null,
+      "repetitions": 8,
+      "definition_version": "broad-screening-circuits-v1",
+      "generator_parameters": {
+        "generator": "repeated_mixed_pauli_block_v1",
+        "rotation_definition": "R_P(theta)=exp(-i*theta*P/2)",
+        "chronological_block": [
+          {
+            "qubits": [
+              0,
+              1
+            ],
+            "axis": "ZZ",
+            "theta_pi": [
+              1,
+              4
+            ]
+          },
+          {
+            "qubits": [
+              1,
+              2
+            ],
+            "axis": "XX",
+            "theta_pi": [
+              1,
+              4
+            ]
+          },
+          {
+            "qubits": [
+              2,
+              3
+            ],
+            "axis": "ZZ",
+            "theta_pi": [
+              -1,
+              4
+            ]
+          },
+          {
+            "qubits": [
+              3,
+              4
+            ],
+            "axis": "XX",
+            "theta_pi": [
+              -1,
+              4
+            ]
+          },
+          {
+            "qubits": [
+              4,
+              5
+            ],
+            "axis": "ZZ",
+            "theta_pi": [
+              1,
+              4
+            ]
+          },
+          {
+            "qubits": [
+              5,
+              6
+            ],
+            "axis": "XX",
+            "theta_pi": [
+              1,
+              4
+            ]
+          },
+          {
+            "qubits": [
+              6,
+              7
+            ],
+            "axis": "ZZ",
+            "theta_pi": [
+              -1,
+              4
+            ]
+          }
+        ],
+        "block_repetitions": 8,
+        "block_order": "increasing adjacent-pair index k; repeat whole block",
+        "decomposition": "ZZ: CNOT(a,b), ZPhase(b,theta/pi), CNOT(a,b); XX: H(a),H(b),ZZ-gadget,H(a),H(b)",
+        "implemented_unitary": "exp(i*pi*global_phase_relative_to_RP_product_pi)*RP_product",
+        "global_phase_relative_to_RP_product_pi": [
+          1,
+          1
+        ],
+        "chemistry_representativeness": "synthetic mixed-axis block only"
+      },
+      "t_count_applicable": true,
+      "convention": {
+        "wire_order": "q0 is the most significant bit; fixed input/output order",
+        "pyzx_phase_unit": "pi",
+        "input_status": "raw generated input; no optimizer applied"
+      },
+      "raw_qasm_sha256": "3d08add53a78fe60e1066a7a05987e5ec525065ab27bba048e59118eee226b10",
+      "normalized_qasm_sha256": "296229fed7af3a4401475e82a1c98acf52b3cf9ec0baf62d6d5c592eaab691b6"
+    },
+    {
+      "circuit_id": "clifford_t_4q_s0",
+      "family": "clifford_t",
+      "qubits": 4,
+      "seed": 0,
+      "repetitions": null,
+      "definition_version": "broad-screening-circuits-v1",
+      "generator_parameters": {
+        "generator": "pyzx.generate.CNOT_HAD_PHASE_circuit",
+        "reference_pyzx_version": "0.10.8",
+        "depth_argument": 80,
+        "depth_argument_meaning": "number of sampled gate placements, not circuit depth",
+        "p_had": 0.2,
+        "p_t": 0.2,
+        "clifford": false,
+        "sigma": null,
+        "input_filtering": "none; accidental repetitions/cancellations retained"
+      },
+      "t_count_applicable": true,
+      "convention": {
+        "wire_order": "q0 is the most significant bit; fixed input/output order",
+        "pyzx_phase_unit": "pi",
+        "input_status": "raw generated input; no optimizer applied"
+      },
+      "raw_qasm_sha256": "b9dcb09012aebc44ab2e38e73b6a5d402d096bb6d18b7f5fd260506e268174e0",
+      "normalized_qasm_sha256": "b9dcb09012aebc44ab2e38e73b6a5d402d096bb6d18b7f5fd260506e268174e0"
+    },
+    {
+      "circuit_id": "clifford_t_4q_s1",
+      "family": "clifford_t",
+      "qubits": 4,
+      "seed": 1,
+      "repetitions": null,
+      "definition_version": "broad-screening-circuits-v1",
+      "generator_parameters": {
+        "generator": "pyzx.generate.CNOT_HAD_PHASE_circuit",
+        "reference_pyzx_version": "0.10.8",
+        "depth_argument": 80,
+        "depth_argument_meaning": "number of sampled gate placements, not circuit depth",
+        "p_had": 0.2,
+        "p_t": 0.2,
+        "clifford": false,
+        "sigma": null,
+        "input_filtering": "none; accidental repetitions/cancellations retained"
+      },
+      "t_count_applicable": true,
+      "convention": {
+        "wire_order": "q0 is the most significant bit; fixed input/output order",
+        "pyzx_phase_unit": "pi",
+        "input_status": "raw generated input; no optimizer applied"
+      },
+      "raw_qasm_sha256": "ad78893200eeb322aacf6e174e2c34466d63090946f5add82fbf6ea12d95c940",
+      "normalized_qasm_sha256": "ad78893200eeb322aacf6e174e2c34466d63090946f5add82fbf6ea12d95c940"
+    },
+    {
+      "circuit_id": "clifford_t_4q_s2",
+      "family": "clifford_t",
+      "qubits": 4,
+      "seed": 2,
+      "repetitions": null,
+      "definition_version": "broad-screening-circuits-v1",
+      "generator_parameters": {
+        "generator": "pyzx.generate.CNOT_HAD_PHASE_circuit",
+        "reference_pyzx_version": "0.10.8",
+        "depth_argument": 80,
+        "depth_argument_meaning": "number of sampled gate placements, not circuit depth",
+        "p_had": 0.2,
+        "p_t": 0.2,
+        "clifford": false,
+        "sigma": null,
+        "input_filtering": "none; accidental repetitions/cancellations retained"
+      },
+      "t_count_applicable": true,
+      "convention": {
+        "wire_order": "q0 is the most significant bit; fixed input/output order",
+        "pyzx_phase_unit": "pi",
+        "input_status": "raw generated input; no optimizer applied"
+      },
+      "raw_qasm_sha256": "a2337bd96237de9afd971734bcd5d047030dae65792324cf97f1506b304c98bd",
+      "normalized_qasm_sha256": "a2337bd96237de9afd971734bcd5d047030dae65792324cf97f1506b304c98bd"
+    },
+    {
+      "circuit_id": "clifford_t_6q_s0",
+      "family": "clifford_t",
+      "qubits": 6,
+      "seed": 0,
+      "repetitions": null,
+      "definition_version": "broad-screening-circuits-v1",
+      "generator_parameters": {
+        "generator": "pyzx.generate.CNOT_HAD_PHASE_circuit",
+        "reference_pyzx_version": "0.10.8",
+        "depth_argument": 80,
+        "depth_argument_meaning": "number of sampled gate placements, not circuit depth",
+        "p_had": 0.2,
+        "p_t": 0.2,
+        "clifford": false,
+        "sigma": null,
+        "input_filtering": "none; accidental repetitions/cancellations retained"
+      },
+      "t_count_applicable": true,
+      "convention": {
+        "wire_order": "q0 is the most significant bit; fixed input/output order",
+        "pyzx_phase_unit": "pi",
+        "input_status": "raw generated input; no optimizer applied"
+      },
+      "raw_qasm_sha256": "cc5aceb4db04e44203f995a02da86e887c687465cb4da9b344f1c1c42a9500fe",
+      "normalized_qasm_sha256": "cc5aceb4db04e44203f995a02da86e887c687465cb4da9b344f1c1c42a9500fe"
+    },
+    {
+      "circuit_id": "clifford_t_6q_s1",
+      "family": "clifford_t",
+      "qubits": 6,
+      "seed": 1,
+      "repetitions": null,
+      "definition_version": "broad-screening-circuits-v1",
+      "generator_parameters": {
+        "generator": "pyzx.generate.CNOT_HAD_PHASE_circuit",
+        "reference_pyzx_version": "0.10.8",
+        "depth_argument": 80,
+        "depth_argument_meaning": "number of sampled gate placements, not circuit depth",
+        "p_had": 0.2,
+        "p_t": 0.2,
+        "clifford": false,
+        "sigma": null,
+        "input_filtering": "none; accidental repetitions/cancellations retained"
+      },
+      "t_count_applicable": true,
+      "convention": {
+        "wire_order": "q0 is the most significant bit; fixed input/output order",
+        "pyzx_phase_unit": "pi",
+        "input_status": "raw generated input; no optimizer applied"
+      },
+      "raw_qasm_sha256": "5a9d07d1ab65922a35e54f37a3250b9497ec20d84f71e2cdf31d8863fc2d9358",
+      "normalized_qasm_sha256": "5a9d07d1ab65922a35e54f37a3250b9497ec20d84f71e2cdf31d8863fc2d9358"
+    },
+    {
+      "circuit_id": "clifford_t_6q_s2",
+      "family": "clifford_t",
+      "qubits": 6,
+      "seed": 2,
+      "repetitions": null,
+      "definition_version": "broad-screening-circuits-v1",
+      "generator_parameters": {
+        "generator": "pyzx.generate.CNOT_HAD_PHASE_circuit",
+        "reference_pyzx_version": "0.10.8",
+        "depth_argument": 80,
+        "depth_argument_meaning": "number of sampled gate placements, not circuit depth",
+        "p_had": 0.2,
+        "p_t": 0.2,
+        "clifford": false,
+        "sigma": null,
+        "input_filtering": "none; accidental repetitions/cancellations retained"
+      },
+      "t_count_applicable": true,
+      "convention": {
+        "wire_order": "q0 is the most significant bit; fixed input/output order",
+        "pyzx_phase_unit": "pi",
+        "input_status": "raw generated input; no optimizer applied"
+      },
+      "raw_qasm_sha256": "d2626d36f2fa9c929bfd94cfce346644db2898804a9d372bca412b3fa8112050",
+      "normalized_qasm_sha256": "d2626d36f2fa9c929bfd94cfce346644db2898804a9d372bca412b3fa8112050"
+    },
+    {
+      "circuit_id": "clifford_t_8q_s0",
+      "family": "clifford_t",
+      "qubits": 8,
+      "seed": 0,
+      "repetitions": null,
+      "definition_version": "broad-screening-circuits-v1",
+      "generator_parameters": {
+        "generator": "pyzx.generate.CNOT_HAD_PHASE_circuit",
+        "reference_pyzx_version": "0.10.8",
+        "depth_argument": 80,
+        "depth_argument_meaning": "number of sampled gate placements, not circuit depth",
+        "p_had": 0.2,
+        "p_t": 0.2,
+        "clifford": false,
+        "sigma": null,
+        "input_filtering": "none; accidental repetitions/cancellations retained"
+      },
+      "t_count_applicable": true,
+      "convention": {
+        "wire_order": "q0 is the most significant bit; fixed input/output order",
+        "pyzx_phase_unit": "pi",
+        "input_status": "raw generated input; no optimizer applied"
+      },
+      "raw_qasm_sha256": "8efe9ebaa310ba380268160be053038bec4f60bb20fd6fb4f28c3ab272bab0ca",
+      "normalized_qasm_sha256": "8efe9ebaa310ba380268160be053038bec4f60bb20fd6fb4f28c3ab272bab0ca"
+    },
+    {
+      "circuit_id": "clifford_t_8q_s1",
+      "family": "clifford_t",
+      "qubits": 8,
+      "seed": 1,
+      "repetitions": null,
+      "definition_version": "broad-screening-circuits-v1",
+      "generator_parameters": {
+        "generator": "pyzx.generate.CNOT_HAD_PHASE_circuit",
+        "reference_pyzx_version": "0.10.8",
+        "depth_argument": 80,
+        "depth_argument_meaning": "number of sampled gate placements, not circuit depth",
+        "p_had": 0.2,
+        "p_t": 0.2,
+        "clifford": false,
+        "sigma": null,
+        "input_filtering": "none; accidental repetitions/cancellations retained"
+      },
+      "t_count_applicable": true,
+      "convention": {
+        "wire_order": "q0 is the most significant bit; fixed input/output order",
+        "pyzx_phase_unit": "pi",
+        "input_status": "raw generated input; no optimizer applied"
+      },
+      "raw_qasm_sha256": "d06f03ec36468189b74daa53ed411f3eb971d9fcbe4ad9873e65b9acc4a3bbe0",
+      "normalized_qasm_sha256": "d06f03ec36468189b74daa53ed411f3eb971d9fcbe4ad9873e65b9acc4a3bbe0"
+    },
+    {
+      "circuit_id": "clifford_t_8q_s2",
+      "family": "clifford_t",
+      "qubits": 8,
+      "seed": 2,
+      "repetitions": null,
+      "definition_version": "broad-screening-circuits-v1",
+      "generator_parameters": {
+        "generator": "pyzx.generate.CNOT_HAD_PHASE_circuit",
+        "reference_pyzx_version": "0.10.8",
+        "depth_argument": 80,
+        "depth_argument_meaning": "number of sampled gate placements, not circuit depth",
+        "p_had": 0.2,
+        "p_t": 0.2,
+        "clifford": false,
+        "sigma": null,
+        "input_filtering": "none; accidental repetitions/cancellations retained"
+      },
+      "t_count_applicable": true,
+      "convention": {
+        "wire_order": "q0 is the most significant bit; fixed input/output order",
+        "pyzx_phase_unit": "pi",
+        "input_status": "raw generated input; no optimizer applied"
+      },
+      "raw_qasm_sha256": "129d7f13a63f8e846e173590e8d550d38a6a4be034db2ed0787a309c6436791d",
+      "normalized_qasm_sha256": "129d7f13a63f8e846e173590e8d550d38a6a4be034db2ed0787a309c6436791d"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "protocol_id": "stage1-standard-v1",
+  "research_plan_commit": "36d01bff08f5fade7b1151872c9c48171a10635c",
+  "methods": ["Original", "Gate-only", "ZX"],
+  "pyzx_version": "0.10.8",
+  "numpy_version": "2.3.5",
+  "gate_basis_id": "H-X-Z-S-T-CNOT-CZ-general-ZPhase-v1",
+  "quarter_phase_normalization": "phase modulo 2pi; k*pi/4 maps to [], T, S, Z+Tdg, Z, Z+T, Sdg, Tdg; general XPhase becomes H-ZPhase-H",
+  "two_q_definition": "CNOT count plus CZ count after normalization",
+  "depth_definition": "ASAP logical gate layers with unit duration for each normalized gate; no routing",
+  "t_count_definition": "literal T and Tdg count after canonical quarter-phase normalization; null for QFT",
+  "non_clifford_rotation_definition": "normalized single-qubit Z phases that are not multiples of pi/2",
+  "cleanup": {"function": "pyzx.optimize.basic_optimization", "do_swaps": false, "quiet": true, "calls_per_method": 1},
+  "simplification": {"function": "pyzx.simplify.full_reduce", "quiet": true},
+  "extraction": {"optimize_cnots": 2, "optimize_czs": true, "up_to_perm": false, "quiet": true},
+  "timing": {
+    "warmups_per_method": 1,
+    "repeats": 10,
+    "method_order": "Gate-only then ZX for even repetitions; ZX then Gate-only for odd repetitions",
+    "timer": "time.perf_counter_ns",
+    "includes": "input copy, conversion, simplification, extraction graph copy, extraction, pre-cleanup normalization, cleanup and final normalization as applicable",
+    "excludes": "common raw-input normalization, artifact capture/serialization/I-O, metrics, hashing, equivalence verification",
+    "output_validation": "QASM hash equals the independently verified quality output, otherwise independently verify that timed output"
+  },
+  "verification": {"method": "independent dense gate-action simulator, all computational basis inputs", "q0_is_msb": true, "wire_permutation_allowed": false, "global_phase": "unit-modulus only", "atol": 1e-9, "rtol": 0},
+  "resources": {"seconds_per_pipeline_call": 60, "seconds_per_verification": 60, "address_space_limit_bytes": 2147483648, "blas_threads": 1},
+  "input_manifest": "manifests/stage1-standard-v1.json",
+  "scope": "Exploratory 33-input Stage 1. No hardware routing, approximate Clifford+T synthesis, or extraction-direction comparison."
+}
